@@ -1,0 +1,45 @@
+html, header, body, footer {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+header {   
+    background-color: #ff7046;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.66);
+}
+
+.logo {
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.brand-logo {
+    margin-left: 30px;
+}
+
+.highlight {
+    color: orange;
+}
+
+h1.header {
+    color: lightgray;
+}
+
+/*
+header.page-header {
+  
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+
+  margin: 0;
+}
+
+*/
+
