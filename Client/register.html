@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/register.css" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЛКШ.Спорт - Регистрация</title>
+</head>
+
+<body>
+    <header>
+        <!-- Dropdown Structure -->
+        <ul id="sports-types" class="dropdown-content">
+            <li><a href="sports/volleyball.html">Волейбол</a></li>
+            <li class="divider"></li>
+            <li><a href="sports/streetball.html">Стритбол</a></li>
+            <li class="divider"></li>
+            <li><a href="sports/table_tennis.html">Настольный теннис</a></li>
+            <li class="divider"></li>
+            <li><a href="sports/poker.html">Покер</a></li>
+            <li class="divider"></li>
+            <li><a href="sports/chess.html">Шахматы</a></li>
+            <li class="divider"></li>
+            <li><a href="sports/water-polo.html">Водное поло</a></li>
+            <li class="divider"></li>
+            <li><a href="sports/badminton.html">Бадминтон</a></li>
+            <li class="divider"></li>
+            <li><a href="sports/mafia.html">Мафия</a></li>
+            <li class="divider"></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <img class="logo" width="50px" height="50px" src="images/logo.jpg" />
+                <a class="brand-logo">ЛКШ.Спорт</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#" data-target="sports-types">Выбрать спорт<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="timetable.html">Расписание</a></li>
+                    <li><a href="register.html">Зарегистрировать участника</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Регистрация участника</h1>
+        <br>
+        <label>Выберите вид спорта:</label>
+        <select>
+            <option value="not-chosen" selected></option>
+            <option value="volleyball">Волейбол</option>
+            <option value="streetball">Стритбол</option>
+            <option value="table-tennis">Настольный теннис</option>
+            <option value="poker">Покер</option>
+            <option value="chess">Шахматы</option>
+            <option value="water-polo">Водное поло</option>
+            <option value="badminton">Бадминтон</option>
+            <option value="mafia">Мафия</option>
+        </select>
+        <input name="team-name" type="text" class="volleyball streetball water-polo" id="team-name-id"/>
+        <label for="team-name-id">Название команды:</label>
+        <p class="volleyball streetball water-polo">Введите состав команды. Указывайте участников в формате Фамилия Имя.(без точки)
+            Параллель не указывайте, мы подберём её сами.</p>  
+        <input name="participant-1" type="text" class="volleyball streetball water-polo" id="participant-1-id"/>
+        <label for="participant-1-id">Участник 1:</label>
+        <input name="participant-2" type="text" class="volleyball streetball water-polo" id="participant-2-id"/>
+        <label for="participant-2-id">Участник 2:</label>
+        <input name="participant-3" type="text" class="volleyball streetball water-polo" id="participant-3-id"/>
+        <label for="participant-3-id">Участник 3:</label>
+        <input name="participant-4" type="text" class="volleyball streetball water-polo" id="participant-4-id"/>
+        <label for="participant-4-id">Участник 4:</label>
+        <input name="participant-5" type="text" class="volleyball" id="participant-5-id"/>
+        <label for="participant-5-id">Участник 5:</label>
+        <input name="participant-6" type="text" class="volleyball" id="participant-6-id"/>
+        <label for="participant-6-id">Участник 6:</label>
+        <input name="participant-7" type="text" class="volleyball" id="participant-7-id"/>
+        <label for="participant-7-id">Участник 7:</label>
+        <input name="participant-8" type="text" class="volleyball" id="participant-8-id"/>
+        <label for="participant-8-id">Участник 8:</label>
+        <input name="participant" type="text" class="table-tennis poker chess badminton mafia"
+            placeholder="Пупкин Василий" id="participant-id"/>
+        <label for="participant-id">Введите свою фамилию и имя:</label>
+        <input class="btn waves-effect waves-light" type="submit" value="Отправить"/>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <h5>Контакты:</h5>
+            <p>
+                <span><img height="12px" src="images/telegram.svg"/> @beast_sl</span>
+                <br>
+                <span><img height="12px" src="images/vk.svg"/> vk.com/beast_sl</span>
+                <br>
+                <span><img height="12px" src="images/gmail.svg"/> thatishero@gmail.com</span>
+            </p>
+        </div>
+        <div class="footer-copyright">
+            <span class="copyright">© Сергей Лоптев, Александр Богданов, 2019</span>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+
+<!--
+    
+        <div class="row">
+            <form class="col s12">
+                <div class="row select">
+                    <div class="input-field col s3 select">
+                        <select>
+                            <option value="" disabled selected></option>
+                            <option value="volleyball">Волейбол</option>
+                            <option value="streetball">Стритбол</option>
+                            <option value="table-tennis">Настольный теннис</option>
+                            <option value="poker">Покер</option>
+                            <option value="chess">Шахматы</option>
+                            <option value="water-polo">Водное поло</option>
+                            <option value="badminton">Бадминтон</option>
+                            <option value="mafia">Мафия</option>
+                        </select>
+                        <label>Выберите вид спорта:</label>
+                    </div>
+                </div>
+                <div class="row volleyball streetball water-polo">
+                    <div class="input-field col s4 volleyball streetball water-polo">
+                        <input name="team-name" type="text" class="volleyball streetball water-polo" id="team-name-id"/>
+                        <label for="team-name-id">Название команды:</label>
+                    </div>
+                </div>    
+                <p class="volleyball streetball water-polo">Введите состав команды. Указывайте участников в формате Фамилия Имя.(без точки)
+                    Параллель не указывайте, мы подберём её сами.</p>  
+                <div class="row volleyball streetball water-polo">
+                    <div class="input-field col s4 volleyball streetball water-polo">
+                        <input name="participant-1" type="text" class="volleyball streetball water-polo" id="participant-1-id"/>
+                        <label for="participant-1-id">Участник 1:</label>
+                    </div>
+                </div>
+                <div class="row volleyball streetball water-polo">
+                    <div class="input-field col s4 volleyball streetball water-polo">
+                        <input name="participant-2" type="text" class="volleyball streetball water-polo" id="participant-2-id"/>
+                        <label for="participant-2-id">Участник 2:</label>
+                    </div>
+                </div>   
+                <div class="row volleyball streetball water-polo">
+                    <div class="input-field col s4 volleyball streetball water-polo">
+                        <input name="participant-3" type="text" class="volleyball streetball water-polo" id="participant-3-id"/>
+                        <label for="participant-3-id">Участник 3:</label>
+                    </div>
+                </div>
+                <div class="row volleyball streetball water-polo">
+                    <div class="input-field col s4 volleyball streetball water-polo">
+                        <input name="participant-4" type="text" class="volleyball streetball water-polo" id="participant-4-id"/>
+                        <label for="participant-4-id">Участник 4:</label>
+                    </div>
+                </div>
+                <div class="row volleyball">
+                    <div class="input-field col s4 volleyball">
+                        <input name="participant-5" type="text" class="volleyball" id="participant-5-id"/>
+                        <label for="participant-5-id">Участник 5:</label>
+                    </div>
+                </div>
+                <div class="row volleyball">
+                    <div class="input-field col s4 volleyball">
+                        <input name="participant-6" type="text" class="volleyball" id="participant-6-id"/>
+                        <label for="participant-6-id">Участник 6:</label>
+                    </div>
+                </div>
+                <div class="row volleyball">
+                    <div class="input-field col s4 volleyball">
+                        <input name="participant-7" type="text" class="volleyball" id="participant-7-id"/>
+                        <label for="participant-7-id">Участник 7:</label>
+                    </div>
+                </div>
+                <div class="row volleyball">
+                    <div class="input-field col s4 volleyball">
+                        <input name="participant-8" type="text" class="volleyball" id="participant-8-id"/>
+                        <label for="participant-8-id">Участник 8:</label>
+                    </div>
+                </div>
+                <div class="row table-tennis poker chess badminton mafia">
+                    <div class="input-field col s4 table-tennis poker chess badminton mafia">
+                        <input name="participant" type="text" class="table-tennis poker chess badminton mafia"
+                            placeholder="Пупкин Василий" id="participant-id"/>
+                        <label for="participant-id">Введите свою фамилию и имя:</label>
+                    </div>
+                </div>
+                <div class="row submit">
+                    <div class="input-sield col s2 offset-s1">
+                        <input class="btn waves-effect waves-light" type="submit" value="Отправить"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+-->

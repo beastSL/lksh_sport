@@ -6,3 +6,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         coverTrigger: false
     });
 });
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, {});
+  });

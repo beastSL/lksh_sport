@@ -52,3 +52,39 @@ img:not(.logo) {
 div.col a {
     color: #333333;
 }
+
+select option[value="not-chosen"][selected] ~ input{
+    display: none;
+}
+
+select[value="volleyball"] ~ :not(.volleyball) {
+    display: none;
+}
+
+select[value="streetball"] ~ :not(.streetball) {
+    display: none;
+}
+
+select[value="table-tennis"] ~ :not(.table-tennis) {
+    display: none;
+}
+
+select[value="poker"] ~ :not(.poker) {
+    display: none;
+}
+
+select[value="chess"] ~ :not(.chess) {
+    display: none;
+}
+
+select[value="water-polo"] ~ :not(.water-polo) {
+    display: none;
+}
+
+select[value="badminton"] ~ :not(.badminton) {
+    display: none;
+}
+
+select[value="mafia"] ~ :not(.mafia) {
+    display: none;
+}
