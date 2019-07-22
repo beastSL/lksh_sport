@@ -1,4 +1,4 @@
-html, header, body, footer {
+html, body {
     margin: 0px;
     padding: 0px;
     font-family: 'Exo 2', sans-serif;
@@ -8,6 +8,31 @@ header {
     background-color: #ff7046;
     color: white;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.66);
+}
+
+main {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+/*
+img:not(.logo) {
+    width: 100%;
+}
+*/
+
+#sports-types li {
+    text-align: center;
+}
+
+
+.col img, .col span {
+    border-radius: 10%;
+}
+
+.col span {
+    display: block;
+    text-align: center;
 }
 
 .logo {
@@ -21,25 +46,13 @@ header {
 }
 
 .highlight {
-    color: orange;
+    color: #ff7046;
 }
 
-h1.header {
-    color: lightgray;
+.copyright {
+    margin-left: 5%;
 }
 
-/*
-header.page-header {
-  
+div.col a {
+    color: #333333;
 }
-
-.logo {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-
-  margin: 0;
-}
-
-*/
-

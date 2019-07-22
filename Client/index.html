@@ -15,64 +15,157 @@
 
 <body>
     <header>
-        <!--
-        <nav>
-            <div class="nav-wrapper">
-                <img class="logo" width="60px" height="60px" src="images/logo.jpg"/>
-                <span>ЛКШ.Спорт</span>
-                <ul class="right">
-                    <span class="in-header falldown">Вид спорта</span>
-                    <ul class="submenu">
-                        <li><a>Волейбол</a></li>
-                        <li><a>Стритбол</a></li>
-                        <li><a>Настольный теннис</a></li>
-                        <li><a>Бадминтон</a></li>
-                        <li><a>Покер</a></li>
-                        <li><a>Водное поло</a></li>
-                        <li><a>Шахматы</a></li>
-                        <li><a>Мафия</a></li>
-                    </ul>
-                    <span class="in-header"><a>Расписание</a></span>
-                    <span class="in-header"><a class="register">Зарегистрировать<br>участника</a></span>
-                </ul>
-            </div>
-        </nav>
-    -->
         <!-- Dropdown Structure -->
         <ul id="sports-types" class="dropdown-content">
-            <li><a>Волейбол</a></li>
+            <li><a href="sports/volleyball.html">Волейбол</a></li>
             <li class="divider"></li>
-            <li><a>Стритбол</a></li>
+            <li><a href="sports/streetball.html">Стритбол</a></li>
             <li class="divider"></li>
-            <li><a>Настольный теннис</a></li>
+            <li><a href="sports/table_tennis.html">Настольный теннис</a></li>
             <li class="divider"></li>
-            <li><a>Бадминтон</a></li>
-            <!--<li class="divider"></li>
-        <li><a>Покер</a></li>
-        <li class="divider"></li>
-        <li><a>Водное поло</a></li>
-        <li class="divider"></li>
-        <li><a>Шахматы</a></li>
-        <li class="divider"></li>
-        <li><a>Мафия</a></li>
-        <li class="divider"></li>-->
+            <li><a href="sports/badminton.html">Бадминтон</a></li>
+            <li class="divider"></li>
+            <li><a href="sports/poker.html">Покер</a></li>
+            <li class="divider"></li>
+            <li><a href="sports/water-polo.html">Водное поло</a></li>
+            <li class="divider"></li>
+            <li><a href="sports/chess.html">Шахматы</a></li>
+            <li class="divider"></li>
+            <li><a href="sports/mafia.html">Мафия</a></li>
+            <li class="divider"></li>
         </ul>
         <nav>
             <div class="nav-wrapper">
                 <img class="logo" width="50px" height="50px" src="images/logo.jpg" />
-                <a href="#!" class="brand-logo">ЛКШ.Спорт</a>
+                <a class="brand-logo">ЛКШ.Спорт</a>
                 <ul class="right hide-on-med-and-down">
                     <li><a class="dropdown-trigger" href="#" data-target="sports-types">Выбрать спорт<i
                                 class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a>Расписание</a></li>
-                    <li><a>Зарегистрировать участника</a></li>
+                    <li><a href="timetable.html">Расписание</a></li>
+                    <li><a href="register.html">Зарегистрировать участника</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
-        <h1 class="header center">Добро пожаловать на главную страницу <span class="highlight">ЛКШ.Спорт</span></h1>
+        <h1>Главная страница</h1>
+        <p class="flow-text">Выберите один из видов спорта снизу, чтобы посмотреть результаты и расписание, или нажмите "<span class="highlight">Зарегистрировать участника</span>" в шапке страницы, чтобы зарегистрироваться на соревнование:</p>
+        <div class="row">
+            <div class="col s3">
+                <a href="sports/volleyball.html">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/volleyball.jpg"/>
+                        </div>
+                        <div class="card-action">
+                            <span class="sports-type"><b>Волейбол</b></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col s3">
+                <a href="sports/streetball.html">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/streetball.png"/>
+                        </div>
+                        <div class="card-action">
+                            <span class="center"><b>Стритбол</b></span>
+                        </div>    
+                    </div>
+                </a>
+            </div>
+            <div class="col s3">
+                <a href="sports/table_tennis.html">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/table-tennis.jpg"/>
+                        </div>
+                        <div class="card-action">
+                            <span class="center"><b>Настольный теннис</b></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col s3">
+                <a href="sports/poker.html">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/poker.jpg"/>
+                        </div>
+                        <div class="card-action">
+                            <span class="center"><b>Покер</b></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s3">
+                <a href="sports/chess.html">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/chess.jpg"/>
+                        </div>
+                        <div class="card-action">
+                            <span class="center"><b>Шахматы</b></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col s3">
+                <a href="sports/water-polo.html">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/water-polo.jpg"/>
+                        </div>
+                        <div class="card-action">
+                            <span class="center"><b>Водное поло</b></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col s3">
+                <a href="sports/badminton.html">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/badminton.jpg"/>
+                        </div>
+                        <div class="card-action">
+                            <span class="center"><b>Бадминтон</b></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col s3">
+                <a href="sports/mafia.html">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/mafia.jpg"/>
+                        </div>
+                        <div class="card-action">
+                            <span class="center"><b>Мафия</b></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
     </main>
+    <footer class="page-footer">
+        <div class="container">
+            <h5>Контакты:</h5>
+            <p>
+                <span><img height="12px" src="images/telegram.svg"/> @beast_sl</span>
+                <br>
+                <span><img height="12px" src="images/vk.svg"/> vk.com/beast_sl</span>
+                <br>
+                <span><img height="12px" src="images/gmail.svg"/> thatishero@gmail.com</span>
+            </p>
+        </div>
+        <div class="footer-copyright">
+            <span class="copyright">© Сергей Лоптев, Александр Богданов, 2019</span>
+        </div>
+    </footer>
     <script type="text/javascript" src="js/materialize.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
