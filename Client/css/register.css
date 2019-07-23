@@ -53,38 +53,66 @@ div.col a {
     color: #333333;
 }
 
-select option[value="not-chosen"][selected] ~ input{
+.select-sport.not-chosen ~ div, .select-sport.not-chosen ~ p {
     display: none;
 }
 
-select[value="volleyball"] ~ :not(.volleyball) {
+.btn {
+    color: white;
+}
+
+.select-sport.volleyball ~ :not(.volleyball):not(.btn):not(.chkbox):not(.button) {
     display: none;
 }
 
-select[value="streetball"] ~ :not(.streetball) {
+.select-sport.volleyball ~ p span:not(.volleyball) {
     display: none;
 }
 
-select[value="table-tennis"] ~ :not(.table-tennis) {
+.select-sport.streetball ~ :not(.streetball):not(.btn):not(.chkbox):not(.button) {
     display: none;
 }
 
-select[value="poker"] ~ :not(.poker) {
+.select-sport.streetball ~ p span:not(.streetball) {
     display: none;
 }
 
-select[value="chess"] ~ :not(.chess) {
+.select-sport.table-tennis ~ :not(.table-tennis):not(.btn):not(.button) {
     display: none;
 }
 
-select[value="water-polo"] ~ :not(.water-polo) {
+.select-sport.poker ~ :not(.poker):not(.btn):not(.button) {
     display: none;
 }
 
-select[value="badminton"] ~ :not(.badminton) {
+.select-sport.chess ~ :not(.chess):not(.btn):not(.button) {
     display: none;
 }
 
-select[value="mafia"] ~ :not(.mafia) {
+.select-sport.water-polo ~ :not(.water-polo):not(.btn):not(.chkbox):not(.button) {
     display: none;
+}
+
+.select-sport.water-polo ~ .halfrow div:not(.water-polo) {
+    display: none;
+}
+
+.select-sport.water-polo ~ p span:not(.water-polo) {
+    display: none;
+}
+
+.select-sport.badminton ~ :not(.badminton):not(.btn):not(.button) {
+    display: none;
+}
+
+.select-sport.mafia ~ :not(.mafia):not(.btn):not(.button) {
+    display: none;
+}
+
+.chkbox.checked ~ :not(.single):not(.btn):not(.button) {
+    display: none;
+}
+
+.chkbox.checked ~ .single, .chkbox.checked ~ .btn, .chkbox.checked ~ .button{
+    display: block !important;
 }
