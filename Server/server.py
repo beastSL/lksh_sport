@@ -1,11 +1,12 @@
 from flask import Flask, request
 from flask_restful import Resource, Api, reqparse
 from flask_sqlalchemy import SQLAlchemy
-# from json import dumps
-# from flask_jsonpify import jsonify
-# from datetime import datetime
-# from hashlib import md5
-# from os import urandom
+from flask_jsonpify import jsonify
+from flask_cors import CORS
+from json import dumps
+from datetime import datetime
+from hashlib import md5
+from os import urandom
 
 # Initialize flask app and api
 app = Flask(__name__)
@@ -13,6 +14,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///lksh_sport.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 api = Api(app)
+CORS(app)
 
 
 class Participant(db.Model):
@@ -78,3 +80,34 @@ class Event(db.Model):
         foreign_keys=[team2_id]
     )
     sport = db.relationship('Sport', back_populates='events')
+
+
+# classes responsible for request handling
+
+class RegisterTeam(Resource):
+    def post(self):
+        args = reg_parser.parse_args()
+        print(args)
+        return jsonify({'fuck': 'fuck'})
+
+
+class Events(Resource):
+    def get(self):
+        return jsonify({'fuck': 'sirgay'})
+
+
+db.create_all()
+reg_parser = reqparse.RequestParser()
+reg_parser.add_argument('sports-type')
+reg_parser.add_argument('team-name')
+reg_parser.add_argument('participant')
+reg_parser.add_argument('no-team')
+for i in range(8):
+    reg_parser.add_argument(f'participant-{i+1}')
+
+
+api.add_resource(RegisterTeam, '/api/register_team')
+api.add_resource(Events, '/api/events')
+
+if __name__ == '__main__':
+    app.run(debug=True)
