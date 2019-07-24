@@ -39,9 +39,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     ];
     for (let i = 0; i < sportsTypes.length; i++) {
         let sportType = sportsTypes[i];
+        let required = requiredInputs[i];
         selectList[i].addEventListener("click", event => {
             divSelect.classList.replace(divSelect.classList[1], sportType);
-            setRequired(...requiredInputs[i]);
+            setRequired(...required);
         });
     }
 });
