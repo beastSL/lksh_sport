@@ -7,6 +7,9 @@ from json import dumps
 from datetime import datetime
 from hashlib import md5
 from os import urandom
+import bot
+import config as cfg
+import threading
 
 # Initialize flask app and api
 app = Flask(__name__)
@@ -87,13 +90,24 @@ class Event(db.Model):
 class RegisterTeam(Resource):
     def post(self):
         args = reg_parser.parse_args()
-        print(args)
-        return jsonify({'fuck': 'fuck'})
+        args['sport'] = cfg.sports[args['sports-type']]
+        bot.approve_registration(args)
+        return jsonify(
+            {
+                'message':
+                'Your application is resieved and will soon be reviewed'
+            }
+        )
 
 
 class Events(Resource):
     def get(self):
         return jsonify({'fuck': 'sirgay'})
+
+
+class Approve(Resource):
+    def post(self):
+        pass
 
 
 db.create_all()
@@ -105,9 +119,20 @@ reg_parser.add_argument('no-team')
 for i in range(8):
     reg_parser.add_argument(f'participant-{i+1}')
 
+aprv_parser = reqparse.RequestParser()
+aprv_parser.add_argument('token')
 
 api.add_resource(RegisterTeam, '/api/register_team')
 api.add_resource(Events, '/api/events')
+api.add_resource(Approve, '/api/admin/approve_registration')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    flask_thread = threading.Thread(
+        target=app.run, kwargs={
+            'debug': False,
+            'use_reloader': False,
+            'port': 42069
+        }
+    )
+    flask_thread.start()
+    bot.init()

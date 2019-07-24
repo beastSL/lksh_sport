@@ -92,7 +92,7 @@ window.addEventListener("load", function() {
         });
 
         // Set up our request
-        XHR.open("POST", "http://127.0.0.1:5000/api/register_team");
+        XHR.open("POST", "http://127.0.0.1:42069/api/register_team");
 
         // The data sent is what the user provided in the form
         XHR.send(FD);

@@ -4,12 +4,12 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 token = cfg.tg_token
 request_kwargs = {
-    'proxy_url': cfg.proxy_url,
-    # Optional, if you need authentication:
-    'urllib3_proxy_kwargs': {
-        'username': cfg.proxy_user,
-        'password': cfg.proxy_pass,
-    }
+    # 'proxy_url': cfg.proxy_url,
+    # # Optional, if you need authentication:
+    # 'urllib3_proxy_kwargs': {
+    #     'username': cfg.proxy_user,
+    #     'password': cfg.proxy_pass,
+    # }
 }
 updater = Updater(
     token=cfg.tg_token,
@@ -34,23 +34,40 @@ def logMessage(message):
 def start(update, context):
     context.bot.send_message(
         chat_id=update.message.chat_id,
-        text="You are a faggot"
+        text="The bot is ready" if update.message.chat.username in cfg.admins
+        else cfg.sorry
     )
     logMessage(update.message)
 
 
-def echo(update, context):
-    context.bot.send_message(
-        chat_id=update.message.chat_id,
-        text="@beast_sl is a faggot"
+def approve_registration(args):
+    sirgay_id = '228546319'
+    updater.bot.send_message(
+        chat_id=sirgay_id,
+        text='Поступило новое заявление на регистрацию!\n'
     )
-    logMessage(update.message)
+    print(args['no-team'] is not None)
+    if args['no-team'] is not None:
+        updater.bot.send_message(
+            chat_id=sirgay_id,
+            text=f'Одиночный участник\n'
+            f'Имя, фамилия: {args["participant"]}\n'
+            f'Спорт: {args["sport"]}'
+        )
+    else:
+        text = f'Название команды: {args["team-name"]}\n'
+        i = 1
+        while args.get(f'participant-{i}', '') != '':
+            text += f'Участник {i}: {args[f"participant-{i}"]}\n'
+            i += 1
+        text += f'Спорт: {args["sport"]}'
+        updater.bot.send_message(
+            chat_id=sirgay_id,
+            text=text
+        )
 
 
-start_handler = CommandHandler('start', start)
-dispatcher.add_handler(start_handler)
-echo_handler = MessageHandler(Filters.text, echo)
-dispatcher.add_handler(echo_handler)
-
-updater.start_polling()
-updater.idle()
+def init():
+    start_handler = CommandHandler('start', start)
+    dispatcher.add_handler(start_handler)
+    updater.start_polling()
