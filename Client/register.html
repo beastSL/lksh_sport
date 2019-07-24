@@ -50,7 +50,7 @@
     <main>
         <h1>Регистрация участника</h1>
         <br>
-        <form action="http://base_url.com/api/register_team" method="GET">
+        <form id="registerForm">
             <div class="row not-chosen select-sport">
                 <div class="input-field col s5">
                     <select name="sports-type">
@@ -70,7 +70,7 @@
             <div class="row chkbox">
                 <p class="col s4">
                     <label>
-                        <input type="checkbox" class="filled-in"/>
+                        <input type="checkbox" class="filled-in" name="no-team"/>
                         <span>Зарегистрироваться без команды</span>
                     </label>
                 </p>

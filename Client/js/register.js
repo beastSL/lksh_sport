@@ -60,6 +60,15 @@ document.addEventListener("DOMContentLoaded", function(event){
 var checkboxNoTeam = document.querySelector(".chkbox p label input");
 checkboxNoTeam.addEventListener("click", function(event) {
     var noTeam = document.querySelector(".chkbox");
+    var inputs = document.querySelectorAll('.input-field > input[type="text"]');
+    var setRequired = function(from, to) {
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].required = false;
+        }
+        for (var i = from; i <= to; i++) {
+            inputs[i].required = true;
+        }
+    };
     var checked = false;
     for (var i = 0; i < noTeam.classList.length; i++) {
         if (noTeam.classList[i] == "checked") {
@@ -72,4 +81,39 @@ checkboxNoTeam.addEventListener("click", function(event) {
     } else {
         noTeam.classList.add("checked");
     }
+    setRequired(9, 9);
+});
+
+window.addEventListener("load", function () {
+    function sendData() {
+        var XHR = new XMLHttpRequest();
+    
+        // Bind the FormData object and the form element
+        var FD = new FormData(form);
+    
+        // Define what happens on successful data submission
+        XHR.addEventListener("load", function(event) {
+            alert(event.target.responseText);
+        });
+    
+        // Define what happens in case of error
+        XHR.addEventListener("error", function(event) {
+            alert('Oops! Something went wrong.');
+        });
+    
+        // Set up our request
+        XHR.open("POST", "https://echo.htmlacademy.ru");
+    
+        // The data sent is what the user provided in the form
+        XHR.send(FD);
+    }
+
+    // Access the form element...
+    var form = document.getElementById("registerForm");
+    // ...and take over its submit event.
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+    
+        sendData();
+    });
 });
