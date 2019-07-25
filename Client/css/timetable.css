@@ -1,4 +1,8 @@
-.hidden {
+.hidden-sport {
+    display: none;
+}
+
+.hidden-date {
     display: none;
 }
 

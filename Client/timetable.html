@@ -51,11 +51,12 @@
     <main>
         <div class="row">
             <h1 class="col s3">Расписание</h1>
-            <div class="input-field">
-                <input type="date" class="date col s2 offset-s4"/>
+            <div class="input-field col s2 offset-s4">
+                <input type="text" class="datepicker"/>
+                <label>Выберите дату:</label>
             </div>
-            <div class="input-field col s3">
-                <select name="sports-type">
+            <div class="select-sport input-field col s3">
+                <select>
                     <option value="not-chosen" selected></option>
                     <option value="volleyball">Волейбол</option>
                     <option value="streetball">Стритбол</option>
@@ -69,7 +70,7 @@
                 <label>Выберите вид спорта:</label>
             </div>
         </div>
-        <div class="row volleyball">
+        <div class="row sport volleyball">
             <h3>Волейбол</h3>
             <table>
                 <tr>
@@ -78,13 +79,13 @@
                     <th>Участники</th>
                 </tr>
                 <tr>
-                    <td>18:30</td>
+                    <td>25.07 18:30</td>
                     <td>Финал</td>
                     <td>Барселона - Реал</td>
                 </tr>
             </table>
         </div>
-        <div class="row streetball">
+        <div class="row sport streetball">
             <h3>Стритбол</h3>
             <table>
                 <tr>
@@ -93,17 +94,17 @@
                     <th>Участники</th>
                 </tr>
                 <tr>
-                    <td>18:30</td>
+                    <td>26.07 18:30</td>
                     <td>Финал</td>
                     <td>Барселона - Реал</td>
                 </tr>
             </table>
         </div>
-        <div class="row table-tennis">
+        <div class="row sport table-tennis">
             <h3>Настольный теннис</h3>
             <p>Сегодня играются <span class="highlight">1/16</span> финала сетки виннеров и <span 
                 class="highlight">1/8</span> сетки лузеров.</p>
-            <a class="tttt" href="#">Ссылка на сетку</a>
+            <a class="tttt" href="https://challonge.com/ru/5syrebkx.svg">Ссылка на сетку</a>
             <br>
             <table class="ttt">
                 <tr>
@@ -117,7 +118,7 @@
                 </tr>
             </table>
         </div>
-        <div class="row poker">
+        <div class="row sport poker">
             <h3>Покер</h3>
             <table>
                 <tr>
@@ -127,14 +128,10 @@
                     <th>Участники</th>
                 </tr>
                 <tr>
-                    <td>18:30</td>
+                    <td>25.07 18:30</td>
                     <td>Некромантик</td>
                     <td>Финал</td>
                     <td class="participants">
-                        Лоптев Сергей <span class="parallel">А8</span>
-                        <div class="divider"></div>
-                        Богданов Александр <span class="parallel">A7</span>
-                        <div class="divider"></div>
                         Лоптев Сергей <span class="parallel">А8</span>
                         <div class="divider"></div>
                         Богданов Александр <span class="parallel">A7</span>
@@ -159,7 +156,7 @@
                 </tr>
             </table>
         </div>
-        <div class="row chess">
+        <div class="row sport chess">
             <h3>Шахматы</h3>
             <table>
                 <tr>
@@ -173,7 +170,7 @@
                 </tr>
             </table>
         </div>
-        <div class="row water-polo">
+        <div class="row sport water-polo">
             <h3>Водное поло</h3>
             <table>
                 <tr>
@@ -182,17 +179,17 @@
                     <th>Участники</th>
                 </tr>
                 <tr>
-                    <td>18:30</td>
+                    <td>25.07 18:30</td>
                     <td>Финал</td>
                     <td>Барселона - Реал</td>
                 </tr>
             </table>
         </div>
-        <div class="row badminton">
+        <div class="row sport badminton">
             <h3>Бадминтон</h3>
             <p>Сегодня играются <span class="highlight">1/16</span> финала сетки виннеров и <span 
                 class="highlight">1/8</span> сетки лузеров.</p>
-            <a class="tttt" href="#">Ссылка на сетку</a>
+            <a class="tttt" href="https://challonge.com/ru/q6dh3vam.svg">Ссылка на сетку</a>
             <br>
             <table class="ttt">
                 <tr>
@@ -206,7 +203,7 @@
                 </tr>
             </table>
         </div>
-        <div class="row poker">
+        <div class="row sport mafia">
             <h3>Мафия</h3>
             <table>
                 <tr>
@@ -216,14 +213,10 @@
                     <th>Участники</th>
                 </tr>
                 <tr>
-                    <td>18:30</td>
+                    <td>25.07 18:30</td>
                     <td>Некромантик</td>
                     <td>Финал</td>
                     <td class="participants">
-                        Лоптев Сергей <span class="parallel">А8</span>
-                        <div class="divider"></div>
-                        Богданов Александр <span class="parallel">A7</span>
-                        <div class="divider"></div>
                         Лоптев Сергей <span class="parallel">А8</span>
                         <div class="divider"></div>
                         Богданов Александр <span class="parallel">A7</span>
@@ -266,5 +259,5 @@
     </footer>
     <script type="text/javascript" src="js/materialize.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/register.js"></script>
+    <script type="text/javascript" src="js/timetable.js"></script>
 </body>
