@@ -1,0 +1,41 @@
+.hidden {
+    display: none;
+}
+
+.tttt {
+    border: 1px solid #ff7046;
+    color: #ff7046;
+    padding: 5px;
+}
+
+.tttt:hover {
+    background-color: #ff7046;
+    color: white;
+}
+
+.participants {
+    line-height: 2em;
+}
+
+.parallel {
+    color: #bbbbbb;
+    font-size: 0.8em;
+}
+
+.ttt {
+    width: 30%;
+}
+
+tr:hover {
+    background-color: #eeeeee;
+}
+
+tr:hover td .parallel {
+    color: #ff7046;
+}
+
+
+.ttt tr td {
+    text-align: center;
+}
+
