@@ -6,10 +6,10 @@ from flask_cors import CORS
 from json import dumps
 from datetime import datetime
 from hashlib import md5
-from os import urandom
 import bot
 import config as cfg
 import threading
+import logging
 
 # Initialize flask app and api
 app = Flask(__name__)
@@ -19,6 +19,14 @@ db = SQLAlchemy(app)
 api = Api(app)
 CORS(app)
 
+# Initialize registering dict
+applications = {}
+
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
+
 
 class Participant(db.Model):
     __tablename__ = 'participant'
@@ -27,8 +35,10 @@ class Participant(db.Model):
     name = db.Column(db.String)
     is_captain = db.Column(db.Boolean)
     team_id = db.Column(db.Integer, db.ForeignKey('team.id'))
+    sport_id = db.Column(db.Integer, db.ForeignKey('sport.id'))
 
     team = db.relationship('Team', back_populates='participants')
+    sport = db.relationship('Sport', back_populates='participants')
 
     def __repr__(self):
         return f'<Participant(name=\"{self.name}\")>'
@@ -58,6 +68,7 @@ class Sport(db.Model):
 
     teams = db.relationship('Team', back_populates='sport')
     events = db.relationship('Event', back_populates='sport')
+    participants = db.relationship('Participant', back_populates='sport')
 
     def __repr__(self):
         return f'<Sport(name={self.name})>'
@@ -87,11 +98,60 @@ class Event(db.Model):
 
 # classes responsible for request handling
 
+def existsParticipant(name, sport_id):
+    return Participant.query.filter_by(
+        name=name,
+        sport_id=sport_id
+    ).first() is not None
+
+
+def existsTeam(name, sport_id):
+    return Team.query.filter_by(
+        name=name,
+        sport_id=sport_id
+    ).first() is not None
+
+
 class RegisterTeam(Resource):
     def post(self):
         args = reg_parser.parse_args()
         args['sport'] = cfg.sports[args['sports-type']]
-        bot.approve_registration(args)
+        args['hash'] = md5(str(args).encode('utf-8')).hexdigest()
+        applications[args['hash']] = args
+        sport = Sport.query.filter_by(name=args['sport']).first()
+        if args['no-team']:
+            part_name = args['participant']
+            if existsParticipant(part_name, sport.id):
+                return 'There is already a participant with the same name '
+                'registered for this sport'
+            else:
+                bot.requestApproval(args)
+        else:
+            if Team.query.filter_by(name=args['team-name']).first() is not None:
+                return jsonify(
+                    {
+                        'message':
+                        'There is already a registered team with that name'
+                    }
+                )
+            illegal_participants = []
+            i = 1
+            part_name = args[f'participant-{i}']
+
+            while args.get(part_name, '') != '':
+                if existsParticipant(part_name, sport.id):
+                    illegal_participants.append(part_name)
+                i += 1
+                part_name = args.get(f'participant-{i}', '')
+
+            if len(illegal_participants) > 0:
+                response = 'These people are already registered '
+                'for this sport in different teams:\n'
+                response += '\n'.join(illegal_participants)
+                return response
+            else:
+                bot.requestApproval(args)
+
         return jsonify(
             {
                 'message':
@@ -107,10 +167,50 @@ class Events(Resource):
 
 class Approve(Resource):
     def post(self):
-        pass
+        token = aprv_parser.parse_args()['token']
+        args = applications[token]
+        sport = Sport.query.filter_by(name=args['sport']).first()
+        if args['no-team'] is not None:
+            p = Participant(
+                name=args['participant'],
+                team_id=69420,
+                sport_id=sport.id
+            )
+            db.session.add(p)
+        else:
+            participants = []
+            t = Team(name=args['team-name'], sport_id=sport.id)
+            db.session.add(t)
+            db.session.commit()
+            i = 1
+            while args.get(f'participant-{i}', '') != '':
+                p = Participant(
+                    name=args[f'participant-{i}'],
+                    sport_id=sport.id,
+                    team_id=t.id
+                )
+                participants.append(p)
+                i += 1
+                part_name = args[f'participant-{i}']
+            db.session.add_all(participants)
+            db.session.commit()
+        bot.success(args['hash'], 'подтверждена')
+
+
+class Shutdown(Resource):
+    def post(self):
+        token = aprv_parser.parse_args()['token']
+        if token == 'denislox':
+            exit()
 
 
 db.create_all()
+
+for sport in cfg.sports.values():
+    if Sport.query.filter_by(name=sport).first() is None:
+        db.session.add(Sport(name=sport))
+    db.session.commit()
+
 reg_parser = reqparse.RequestParser()
 reg_parser.add_argument('sports-type')
 reg_parser.add_argument('team-name')
