@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/mafia.css"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЛКШ.Спорт</title>
+</head>
+
+<body>
+    <header>
+        <!-- Dropdown Structure -->
+        <ul id="sports-types" class="dropdown-content">
+            <li><a href="sports/football.html">Футбол</a></li>
+            <li class="divider"></li>
+            <li><a href="volleyball.html">Волейбол</a></li>
+            <li class="divider"></li>
+            <li><a href="streetball.html">Стритбол</a></li>
+            <li class="divider"></li>
+            <li><a href="table_tennis.html">Настольный теннис</a></li>
+            <li class="divider"></li>
+            <li><a href="poker.html">Покер</a></li>
+            <li class="divider"></li>
+            <li><a href="chess.html">Шахматы</a></li>
+            <li class="divider"></li>
+            <li><a href="water-polo.html">Водное поло</a></li>
+            <li class="divider"></li>
+            <li><a href="badminton.html">Бадминтон</a></li>
+            <li class="divider"></li>
+            <li><a href="mafia.html">Мафия</a></li>
+            <li class="divider"></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="../index.html"><img class="logo" width="50px" height="50px" src="../images/logo.jpg"/></a>
+                <a class="brand-logo">ЛКШ.Спорт</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#" data-target="sports-types">Выбрать спорт<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="../timetable.html">Расписание</a></li>
+                    <li><a href="../register.html">Зарегистрировать участника</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Покер</h1>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3">
+                        <a href="#results">Результаты</a>
+                    </li>
+                    <li class="tab col s3">
+                        <a href="#timetable">Расписание</a>
+                    </li>
+                    <li class="tab col s3">
+                        <a href="#participants">Список участников</a>
+                    </li>
+                    <li class="tab col s3">
+                        <a href="#rules">Правила</a>
+                    </li>
+                </ul>
+            </div> 
+            <div id="results" class="col s12">
+                <h3>Стол 10</h3>
+                <table>
+                    <tr>
+                        <th>Место</th>
+                        <th>Участник</th>
+                        <th>Проход в следующий раунд</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Лоптев Сергей <div class="parallel">физрук</div></td>
+                        <td>Да</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Богданов Александр <div class="parallel">А8.преп</div></td>
+                        <td>Нет</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="timetable">
+                <h2>28.07</h2>
+                <div class="col s6">
+                    <h3>Стол 2</h3>
+                    <table class="wide">
+                        <tr>
+                            <th>Участник</th>
+                        </tr>
+                        <tr>
+                            <td>Лоптев Сергей <div class="parallel">физрук</div></td>
+                        </tr>
+                        <tr>
+                            <td>Богданов Александр <div class="parallel">А8.преп</div></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col s6">
+                    <h3>Стол 3</h3>
+                    <table class="wide">
+                        <tr>
+                            <th>Участник</th>
+                        </tr>
+                        <tr>
+                            <td>Лоптев Сергей <div class="parallel">физрук</div></td>
+                        </tr>
+                        <tr>
+                            <td>Богданов Александр <div class="parallel">А8.преп</div></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="participants" class="col s12">
+                <table class="ttt">
+                    <tr>
+                        <th>Список участников</th>
+                    </tr>
+                    <tr>
+                        <td>Лоптев Сергей <div class="parallel">физрук</div></td>
+                    </tr>
+                    <tr>
+                        <td>Богданов Александр <div class="parallel">А8.преп</div></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="rules">
+                <div class="col s10 offset-s1">
+                    <h2>Правила</h2>
+                    <h3>Выигрышные комбинации классического покера</h3>
+                    <p>
+                        Обладателем банка игры будет тот, у кого на руках окажется самая высокая комбинация из карт.
+                         Правила игры в покер предусматривают 10 возможных комбинаций.
+                    </p> 
+                    <img src="../content/combinations2.png"/>
+                    <p>
+                        Чтобы понимать, как играть в покер, нужно запомнить старшинство данных покерных комбинаций:
+                        <ul>
+                        <li>«Роял Стрит Флеш» – 5 самых старших одномастных карт.</li>
+                        <li>«Стрит Флеш» – 5 карт одной масти по порядку.</li>
+                        <li>«Каре» – 4 карты одного ранга.</li>
+                        <li>«Фулл Хаус» – комбинация, включающая в себя «Пару» и «Тройку» одновременно.</li>
+                        <li>«Флеш» – 5 одномастных карт.</li>
+                        <li>«Стрит» – 5 собранных по порядку карт любой масти.</li>
+                        <li>«Сет» или «Тройка» – 3 карты одного ранга.</li>
+                        <li>«Две пары» – 4 карты, среди которых собраны по 2 одинаковых по рангу.</li>
+                        <li>«Пара» – это 2 одинаковые карты.</li>
+                        <li>«Пара» – это 2 одинаковые карты.</li>
+                        </ul>
+                        Самая младшая комбинация «Старшая карта» – это 1 карта. Чем она выше по рангу, тем вероятнее ее 
+                        победа.
+                    </p>
+                    <h3>Правила игры в классический покер</h3>
+                    <p>
+                        В игре может участвовать от 2 до 10 человек. Каждому игроку в Техасском Холдеме раздается по две 
+                        карты. <br>
+                        
+                        После раздачи начинается торговля, которая проходит в несколько раундов.<br>
+                        <br>
+                        Два игрока по левую руку от дилера делают обязательные ставки, которые взимаются еще до начала 
+                        торгов. Это делается для того, чтобы стимулировать игроков на активную игру. Эти обязательные 
+                        ставки называются блайндами. Таковы правила игры в покер.<br>
+                        <br>
+                        Если вы начинающий игрок, то знайте, что во время раздачи выгоднее иметь позднюю позицию, чтобы 
+                        отслеживать шаги своих соперников. Это не правила игры в покер, а скорее своеобразный тактический 
+                        ход.<br>
+                        После того, как игроки поставили блайнды, начинается первый этап торговли.<br>
+                        <br>
+                        Правила игры в покер подразумевают наличие определенных действий, которые игрок совершает в процессе торговли:
+                        <ul>
+                            <li>Поставить, бет (англ. bet) – сделать ставку</li>
+                            <li>Ответить, колл (англ. call) – поставить столько же, сколько поставил соперник – 
+                                уравнять</li>
+                            <li>Поднять, рейз (англ. raise) – увеличить ставку – поставить больше, чем соперники</li>
+                            <li>Cбросить карты, фолд (англ. fold) – отказаться от дальнейшего участия в игре и сбросить 
+                                карты</li>
+                            <li>Пропустить, чек (англ. check) – в ситуациях, когда ставка уже была сделана или ставки не 
+                                были сделаны соперниками – не добавлять ничего в банк, оставить «как есть»</li>
+                        </ul>
+                        <p>
+                            Круг торговли заканчивается тогда, когда все игроки сделали равные ставки или сбросили карты.<br>
+                        </p>
+                        <p>    
+                            После первого круга торговли, если в раздаче остается больше одного человека, то, по правилам 
+                            игры в покер, на стол кладутся три общие открытые карты, которые называют флоп. Общие карты 
+                            нужно использовать для составления комбинаций.
+                        </p>
+                        <p> 
+                            Если и после этого раунда в раздаче остается больше одного человека, то кладут еще одну общую 
+                            карту, которую называют терном. Аналогично флопу, после сдачи терна проводится еще один круг 
+                            торговли.
+                        </p>
+                        <p>
+                            После терна, если это необходимо, кладут последнюю общую карту – ривер.
+                        </p>
+                        <p>
+                            После ривера следует еще один раунд торговли, и если после него на банк претендует два или 
+                            более игроков, то происходит вскрытие.
+                        </p>
+                        <p> 
+                            Комбинации по правилам покера составляются из пяти общих карт и двух закрытых. Когда была 
+                            осуществлена и уравнена последняя ставка, все оставшиеся в игре люди по очереди начинают 
+                            открывать для противников свои карты. Из них составляются и оцениваются итоговые выигрышные 
+                            комбинации. 
+                        </p>
+                </div>
+                <div class="s1"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <h5>Контакты:</h5>
+            <p>
+                <span><img height="12px" src="../images/telegram.svg"/> @beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/vk.svg"/> vk.com/beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/gmail.svg"/> thatishero@gmail.com</span>
+            </p>
+        </div>
+        <div class="footer-copyright">
+            <span class="copyright">© Сергей Лоптев, Александр Богданов, 2019</span>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/badminton.js"></script>
+</body>

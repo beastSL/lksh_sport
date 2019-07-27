@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/streetball.css"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЛКШ.Спорт</title>
+</head>
+
+<body>
+    <header>
+        <!-- Dropdown Structure -->
+        <ul id="sports-types" class="dropdown-content">
+            <li><a href="sports/football.html">Футбол</a></li>
+            <li class="divider"></li>
+            <li><a href="volleyball.html">Волейбол</a></li>
+            <li class="divider"></li>
+            <li><a href="streetball.html">Стритбол</a></li>
+            <li class="divider"></li>
+            <li><a href="table_tennis.html">Настольный теннис</a></li>
+            <li class="divider"></li>
+            <li><a href="poker.html">Покер</a></li>
+            <li class="divider"></li>
+            <li><a href="chess.html">Шахматы</a></li>
+            <li class="divider"></li>
+            <li><a href="water-polo.html">Водное поло</a></li>
+            <li class="divider"></li>
+            <li><a href="badminton.html">Бадминтон</a></li>
+            <li class="divider"></li>
+            <li><a href="mafia.html">Мафия</a></li>
+            <li class="divider"></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="../index.html"><img class="logo" width="50px" height="50px" src="../images/logo.jpg"/></a>
+                <a class="brand-logo">ЛКШ.Спорт</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#" data-target="sports-types">Выбрать спорт<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="../timetable.html">Расписание</a></li>
+                    <li><a href="../register.html">Зарегистрировать участника</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Волейбол</h1>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3">
+                        <a href="#results">Результаты</a>
+                    </li>
+                    <li class="tab col s3">
+                        <a href="#timetable">Расписание</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#net">Сетка</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#participants">Список участников</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#rules">Правила</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="results" class="col s12">
+                <table class="narrow">
+                    <tr>
+                        <th>Дата</th>
+                        <th>Результат</th>
+                    </tr>
+                    <tr>
+                        <td>25.07 18:30</td>
+                        <td>Барселона <div class="result">3 : 1</div> Реал</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="timetable" class="col s12">
+                <table class="narrow">
+                    <tr>
+                        <th>Дата</th>
+                        <th>Игра</th>
+                    </tr>
+                    <tr>
+                        <td>30.07 18:30</td>
+                        <td>Реал - Барселона</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="net">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s6">
+                            <a href="#group">Групповой этап</a>
+                        </li>
+                        <li class="tab col s6">
+                            <a target="_blank" href="../content/badminton_net.svg">Плейофф</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="group">
+                    <h2>Группа 1</h2>
+                    <table>
+                        <tr>
+                            <th>Место</th>
+                            <th>Команда</th>
+                            <th>Побед</th>
+                            <th>Ничьих</th>
+                            <th>Поражений</th>
+                            <th>Очки</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Барселона</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>9</td>
+                        </tr>
+                    </table>
+                </div> 
+            </div>
+            <div id="participants" class="col s12">
+                <table class="narrow">
+                    <tr>
+                        <th>Список участников</th>
+                    </tr>
+                    <tr>
+                        <td>Барселона</td>
+                    </tr>
+                    <tr>
+                        <td>Реал</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="rules" class="col s12">
+                <div class="col s10 offset-s1">
+                    <h2>Правила</h2>
+                    <h3>Цель игры и поведение игроков</h3>
+                    <p>
+                        Главная задача волейбола – взять очко, забив мяч сопернику, либо вынудив его сделать спортивную 
+                        ошибку, следствием чего будет снова забитое очко. Правила волейбола кратко можно описать 
+                        следующими тезисами:
+                        <ol>
+                            <li>
+                                Одновременно на поле играют по 6 человек от каждой команды, однако за всю игру 
+                                предусматривается не более 6 замен, поэтому максимальное количество игроков достигает 14 
+                                человек.
+                            </li>
+                            <li>
+                                Первая подача осуществляется спортсменом, который был выбран посредством жребия. Бросок 
+                                производится из-за линии, которая является задней границей поля. Если игрок заступает за нее, 
+                                либо мяч не пересекает сетку, либо наоборот – мяч пересекает границы поля противника, то те в 
+                                свою очередь выигрывают очко и производят следующую подачу.
+                            </li>
+                            <li>
+                                Правила игры в классический волейбол предусматривают возможность розыгрыша мяча на своей 
+                                территории поля, но только путем трех касаний. На практике это выглядит как обычный прием 
+                                мяча, затем распасовка и завершающий удар атаки.
+                            </li>
+                            <li>
+                                После первой подачи команда соперников принимает мяч. Правила позволяют это делать любым 
+                                игрокам, но в большинстве случаев ими становятся участники задней линии. Мяч можно 
+                                принимать любой частью тела, если это необходимо и ситуация оправдывает такое поведение, 
+                                но касание должно происходить только 1 раз.
+                            </li>
+                            <li>
+                                Атака проводится чаще всего под сеткой и может совершаться любым игроком. Противники при 
+                                этом могут ставить блоки и проводить аналогичные атакующие удары, что чаще всего приводит 
+                                к получению очка. Атака с середины поля возможна только с трехметрового расстояния и ее 
+                                проводят игроки задней зоны.
+                            </li>
+                            <li>
+                                Блокировка атакующих действий всегда происходит над сеткой. Блоки имеют право ставить 
+                                игроки средней линии. Не возбраняется, когда руки игроков, отражающих атаку, находятся 
+                                частично на территории соперников. При этом игроки не должны быть помехами друг другу и 
+                                тем более не приносить травм.
+                            </li>
+                            <li>
+                                Игра может содержать от 3 до 5 партий, каждая из которых ведется до 25 очков. После 
+                                окончания каждой партии команды обмениваются половинами полей. Победителем становится тот 
+                                коллектив, который побеждает в трех партиях. Если итог игры спорный после 4 сыгранных игр, 
+                                то пятая партия ведется только до 15 очков.
+                            </li>
+                        </ol>
+                    </p>
+                    <h3>Возможные нарушения в волейболе</h3>
+                    <p>
+                        В процессе игры вполне вероятны нарушения, поскольку волейбол крайне энергичный и динамичный вид спорта. Наиболее распространенными видами нарушений считаются:
+                        <ul>
+                            <li>заступ за заднюю линию в момент подачи мяча;</li>
+                            <li>время на подачу отводится не более восьми секунд, после свистка судьи;</li>
+                            <li>
+                                касаться мяча разрешается только один раз – даже если производится повторное касание 
+                                случайным образом, то это считается нарушением;
+                            </li>
+                            <li>заступ на поле соперника;</li>
+                            <li>касание верхнего края сетки;</li>
+                            <li>расстановка спортсменов на поле, не соответствующая действующим правилам;</li>
+                            <li>больше трех касаний мяча в момент розыгрыша;</li>
+                            <li>неспортивное поведение игроков</li>
+                            <li>пререкания с судьями.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="col s1"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <h5>Контакты:</h5>
+            <p>
+                <span><img height="12px" src="../images/telegram.svg"/> @beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/vk.svg"/> vk.com/beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/gmail.svg"/> thatishero@gmail.com</span>
+            </p>
+        </div>
+        <div class="footer-copyright">
+            <span class="copyright">© Сергей Лоптев, Александр Богданов, 2019</span>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/badminton.js"></script>
+</body>

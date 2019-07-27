@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 document.addEventListener("DOMContentLoaded", function(event) {
     var sportsTypes = [
         "not-chosen",
+        "football",
         "volleyball",
         "streetball",
         "table-tennis",
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     };
     let requiredInputs = [
         [0, -1],
+        [0, 3],
         [0, 6],
         [0, 3],
         [9, 9],

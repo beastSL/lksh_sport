@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/streetball.css"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЛКШ.Спорт</title>
+</head>
+
+<body>
+    <header>
+        <!-- Dropdown Structure -->
+        <ul id="sports-types" class="dropdown-content">
+            <li><a href="sports/football.html">Футбол</a></li>
+            <li class="divider"></li>
+            <li><a href="volleyball.html">Волейбол</a></li>
+            <li class="divider"></li>
+            <li><a href="streetball.html">Стритбол</a></li>
+            <li class="divider"></li>
+            <li><a href="table_tennis.html">Настольный теннис</a></li>
+            <li class="divider"></li>
+            <li><a href="poker.html">Покер</a></li>
+            <li class="divider"></li>
+            <li><a href="chess.html">Шахматы</a></li>
+            <li class="divider"></li>
+            <li><a href="water-polo.html">Водное поло</a></li>
+            <li class="divider"></li>
+            <li><a href="badminton.html">Бадминтон</a></li>
+            <li class="divider"></li>
+            <li><a href="mafia.html">Мафия</a></li>
+            <li class="divider"></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="../index.html"><img class="logo" width="50px" height="50px" src="../images/logo.jpg"/></a>
+                <a class="brand-logo">ЛКШ.Спорт</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#" data-target="sports-types">Выбрать спорт<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="../timetable.html">Расписание</a></li>
+                    <li><a href="../register.html">Зарегистрировать участника</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Стритбол</h1>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s2">
+                        <a href="#results">Результаты</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#timetable">Расписание</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#net">Сетка</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#mvp">Бомбардиры</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#participants">Список участников</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#rules">Правила</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="results" class="col s12">
+                <table class="narrow">
+                    <tr>
+                        <th>Дата</th>
+                        <th>Результат</th>
+                    </tr>
+                    <tr>
+                        <td>25.07 18:30</td>
+                        <td>Барселона <div class="result">3 : 1</div> Реал</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="timetable" class="col s12">
+                <table class="narrow">
+                    <tr>
+                        <th>Дата</th>
+                        <th>Игра</th>
+                    </tr>
+                    <tr>
+                        <td>30.07 18:30</td>
+                        <td>Реал - Барселона</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="net">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s6">
+                            <a href="#group">Групповой этап</a>
+                        </li>
+                        <li class="tab col s6">
+                            <a target="_blank" href="../content/badminton_net.svg">Плейофф</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="group">
+                    <h2>Группа 1</h2>
+                    <table>
+                        <tr>
+                            <th>Место</th>
+                            <th>Команда</th>
+                            <th>Побед</th>
+                            <th>Ничьих</th>
+                            <th>Поражений</th>
+                            <th>Очки</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Барселона</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>9</td>
+                        </tr>
+                    </table>
+                </div> 
+            </div>
+            <div id="mvp" class="col s12">
+                <table class="narrow">
+                    <tr>
+                        <th>Место</th>
+                        <th>Участник</th>
+                        <th>Голов</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Сергей Лоптев</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Александр Богданов</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="participants" class="col s12">
+                <table class="narrow">
+                    <tr>
+                        <th>Список участников</th>
+                    </tr>
+                    <tr>
+                        <td>Барселона</td>
+                    </tr>
+                    <tr>
+                        <td>Реал</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="rules">
+                <div class="col s10 offset-s1">
+                    <h2>Правила Стритбола</h2>
+                    <h3>Команды</h3>
+                    <p>
+                        <ul>
+                            <li>Команда состоит из трех-четырех (3-4) человек. Три (3) игрока на корте, один (1)
+                            запасной.</li>
+                            <li>В команду могут входить преподаватели. На корте от одной команды могут играть
+                            не более одного преподавателя в один момент времени.</li>
+                        </ul>
+                    </p>
+                    <h3>Начало Игры</h3>
+                    <p>
+                        Жеребьевкой по усмотрению судьи определяется, какая команда начинает игру.<br>
+                        Команда, выбирает, будет она начинать игру или потенциальный овертайм.
+                    </p>
+                    <h3>Начисление очков</h3>
+                    <p>
+                        <ul>
+                            <li>Мяч, заброшенный изнутри дуги, оценивается одним (1) очком.</li>
+                            <li>Мяч, заброшенный из-за дуги, оценивается двумя (2) очками.</li>
+                            <li>Результативный штрафной бросок оценивается одним (1) очком.</li>
+                        </ul>
+                    </p>
+                    <h3>Игровое время / Определение победителя</h3>
+                    <p>
+                        <ul>
+                            <li>Основное время игры составляет один период в десять (10) минут относительно
+                                чистого времени.</li>
+                            <li>Часы останавливаются по усмотрению судьи, на время, пока мяч мертвый и пауза
+                                затягивается, и на штрафные броски.</li>
+                            <li>Часы запускаются после окончания ситуации из предыдущего пункта.</li>
+                            <li>Однако команда, набравшая 11 очков или больше, побеждает, если это случается
+                                до окончания основного времени. Это правило применяется только к основному
+                                времени игры (не к овертайму).</li>
+                            <li>
+                                Если по окончании основного времени счет равный, играется овертайм.
+                                <ul>
+                                    <li>Перерыв перед овертаймом длится одну (1) минуту.</li>
+                                    <li>Команда, набравшая в овертайме приемущество в два (2) очка, побеждает.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    <h3>Нарушения</h3>
+                    <p>
+                        <ul>
+                            <li>Лимит командных фолов, не наказываемых штрафными бросками, равен пяти (5).</li>
+                            <li>Игрок, совершивший пять (5) персональных фолов, должен покинуть игру.</li>
+                            <li>Фол на игроке в процессе броска изнутри дуги наказывается одним (1) штрафным
+                                броском. Фол на игроке в процессе броска из-за дуги наказывается двумя (2)
+                                штрафными бросками. Фол на игроке в процессе броска в случае, если мяч забит, 
+                                всегда наказывается одним (1) штрафным броском в дополнение к засчитыванию
+                                попадания.</li>
+                            <li>Небросковые фолы команды, исчерпавшей лимит командных фолов,
+                                наказываются одним (1) штрафным броском.</li>
+                            <li>Фолы определяются на усмотрение судьи.</li>
+                            <li>Судья может удалить игрока в случае неЛКШтского поведения.</li>
+                        </ul>
+                    </p>
+                    <h3>Как играют мячом</h3>
+                    <p>
+                        <ul>
+                            <li>После попадания с игры или результативного последнего штрафного броска мяч
+                            считается мертвым.</li>
+                            <li>
+                                После неудачного броска с игры или последнего штрафного броска:
+                                <ul>
+                                <li>Если нападавшая команда подбирает мяч, она может продолжать атаку, не
+                                выводя мяч за дугу.</li>
+                                <li>Если защищавшаяся команда подбирает мяч, она должна вывести мяч за
+                                дугу (передачей или ведением).</li>
+                                </ul>
+                            </li>
+                            <li>После перехвата, потери и т. п.: если это происходит внутри дуги, мяч должен
+                            быть выведен за дугу передачей или ведением.</li>
+                            <li>Командное владение мячом после ситуаций, когда мяч мертвый, начинается
+                            обменом мячом между защитником и нападающим («чеком») за дугой напротив
+                            корзины.</li>
+                            <li>Защитники не могут противодействовать нападающим, до завершения «чека».</li>
+                            <li>В ситуациях спорного мяча мяч передается защищающейся команде.</li>
+                        </ul>
+                    </p>
+                    <h3>Замена</h3>
+                    <p>
+                        Любая команда может производить замену в ситуациях, когда мяч мертвый.
+                    </p>
+                    <h3>Тайм-ауты</h3>
+                    <p>
+                        Каждая команда имеет право на один 30-секундный тайм-аут. Игрок может
+                        требовать тайм-аут в ситуации, когда мяч мертвый.
+                    </p>
+                </div>
+                <div class="col s1"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <h5>Контакты:</h5>
+            <p>
+                <span><img height="12px" src="../images/telegram.svg"/> @beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/vk.svg"/> vk.com/beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/gmail.svg"/> thatishero@gmail.com</span>
+            </p>
+        </div>
+        <div class="footer-copyright">
+            <span class="copyright">© Сергей Лоптев, Александр Богданов, 2019</span>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/badminton.js"></script>
+</body>

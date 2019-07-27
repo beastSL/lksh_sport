@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/badminton.css"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЛКШ.Спорт</title>
+</head>
+
+<body>
+    <header>
+        <!-- Dropdown Structure -->
+        <ul id="sports-types" class="dropdown-content">
+            <li><a href="sports/football.html">Футбол</a></li>
+            <li class="divider"></li>
+            <li><a href="volleyball.html">Волейбол</a></li>
+            <li class="divider"></li>
+            <li><a href="streetball.html">Стритбол</a></li>
+            <li class="divider"></li>
+            <li><a href="table_tennis.html">Настольный теннис</a></li>
+            <li class="divider"></li>
+            <li><a href="poker.html">Покер</a></li>
+            <li class="divider"></li>
+            <li><a href="chess.html">Шахматы</a></li>
+            <li class="divider"></li>
+            <li><a href="water-polo.html">Водное поло</a></li>
+            <li class="divider"></li>
+            <li><a href="badminton.html">Бадминтон</a></li>
+            <li class="divider"></li>
+            <li><a href="mafia.html">Мафия</a></li>
+            <li class="divider"></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="../index.html"><img class="logo" width="50px" height="50px" src="../images/logo.jpg"/></a>
+                <a class="brand-logo">ЛКШ.Спорт</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#" data-target="sports-types">Выбрать спорт<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="../timetable.html">Расписание</a></li>
+                    <li><a href="../register.html">Зарегистрировать участника</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Шахматы</h1>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3">
+                        <a href="#results">Результаты</a>
+                    </li>
+                    <li class="tab col s3">
+                        <a href="#timetable">Расписание</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a target="_self" href="../content/chess_net.svg">Сетка</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#participants">Список участников</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#rules">Правила</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="results" class="col s12">
+                <table class="ttt center">
+                    <tr>
+                        <th>Время</th>
+                        <th>Игра</th>
+                    </tr>
+                    <tr>
+                        <td>25.07 18:30</td>
+                        <td>Сергей Лоптев <div class="parallel">физрук</div> <div class="result">3 : 1</div> Александр 
+                            Богданов <div class="parallel">А8</div></td>            
+                    </tr>    
+                </table>
+            </div>
+            <div id="timetable" class="col s12 timetable">
+                <table class="ttt center">
+                    <tr>
+                        <th>Предстоящие игры</th>
+                    </tr>
+                    <tr>
+                        <td>Лоптев <div class="parallel">А8</div> - Богданов <div class="parallel">А7</div></td>
+                    </tr>
+                    <tr>
+                        <td>Лоптев <div class="parallel">А8</div> - Богданов <div class="parallel">А7</div></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="participants" class="col s12">
+                <table class="ttt">
+                    <tr>
+                        <th>Список участников</th>
+                    </tr>
+                    <tr>
+                        <td>Лоптев Сергей <div class="parallel">физрук</div></td>
+                    </tr>
+                    <tr>
+                        <td>Богданов Александр <div class="parallel">А8.преп</div></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="rules" >
+                <div class="col s10 offset-s1">
+                    <h2>Правила</h2>
+                    <h3>Шахматная доска</h3>
+                    <p>
+                        Партия играется на доске из 64 квадратов, попеременно светлых и темных полей. Линейные ряды полей 
+                        называют вертикалями, горизонталями и диагоналями.<br>
+                        При этом вертикальные линии обозначаются буквами латиницы «A» до «H», а горизонтали - цифрами от 1 
+                        до 8. Таким образом каждая клетка (игровое поле) имеет координату, образующуюся путем написания 
+                        маркеров вертикали и горизонтали, например E2.<br>
+                        Во время игры шахматная доска располагается таким образом, чтобы у каждого игрока справа 
+                        находилось белое угловое поле.<br>         
+                    </p>
+                    <h3>Шахматные фигуры</h3>
+                    <p>
+                        Каждый шахматист оперирует фигурами своего цвета: король, ферзь, по два слона, коня, ладьи, 8 
+                        пешек.<br>
+                        Располагаются фигуры в следующем порядке (слева направо): ладья, конь, слон, ферзь, король, слон, 
+                        конь, ладья на ближней к игроку линии, и восемь пешек в горизонтали на второй от игрока линии.
+                    </p>
+                    <h3>Правила ходов</h3>
+                    <p>
+                        Партию начинает игрок с белыми фигурами. Далее ходы делаются поочередно.<br>
+                        Ход - перемещение фигуры с одного поля на другое, свободное либо занятое фигурой противника. Кроме 
+                        коня и ладьи при рокировке фигуры не могут пересекать занятые фигурами клетки.<br>
+                        Если ход осуществляется на поле, занятое фигурой противника - это означает, что фигура соперника 
+                        бита и ее снимают с доски.<br>
+                        Ход осуществляется одной фигурой за исключением рокировки: двойного хода с перемещением короля и 
+                        ладьи. При этом сначала король перемещается на два поля по направлению к ладье, которая затем 
+                        переносится через него на соседнее с ним поле. При этом игрок сначала должен коснуться короля (по 
+                        правилу «Прикосновение к фигуре»). Во время рокировки король не может пересекать поле, атакованное 
+                        фигурами противника. Рокировка возможно только в случае, если король или ладья уже ходили.<br>
+                        <ul>
+                            <li>Король - ходит на любое соседнее поле, которое не атаковано;</li>
+                            <li>Ферзь - ходит на любое поле по вертикали, горизонтали и диагонали;</li>
+                            <li>Ладья - ходит на любое поле по вертикали и горизонтали;</li>
+                            <li>Слон - ходит на любое поле по диагоналям;</li>
+                            <li>Конь - ходит своеобразным зигзагом (буквой «Г») в том числе и через занятые другими 
+                                фигурами поля;</li>
+                            <li>Пешка - ходит только вперед по вертикали на соседнее свободное поле (с начальной линии 
+                                пешка может перемещаться на два поля вперед). Взятие пешкой чужой фигуры возможно лишь по 
+                                диагонали с перемещением вперед.</li>
+                        </ul>
+                        Если пешка во время игры достигнет последней (восьмой для белых и первой для черных) горизонтали, 
+                        она «превращается» в ферзя, ладью, слона или коня своего цвета. При этом выбор заменяемой фигуры не 
+                        зависит от оставшихся на доске фигур - пешка может стать вторым ферзем, третьим конем и т.д.
+                    </p>
+                    <h3>Цель игры</h3>
+                    <p>
+                        Задачей игры в шахматах является постановка мата королю противника. Мат - это такое нападение на 
+                        короля соперника, при котором он не может уклониться, быть прикрытым от удара другой фигурой или 
+                        самостоятельно взять атакующую фигуру соперника.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <h5>Контакты:</h5>
+            <p>
+                <span><img height="12px" src="../images/telegram.svg"/> @beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/vk.svg"/> vk.com/beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/gmail.svg"/> thatishero@gmail.com</span>
+            </p>
+        </div>
+        <div class="footer-copyright">
+            <span class="copyright">© Сергей Лоптев, Александр Богданов, 2019</span>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/badminton.js"></script>
+</body>

@@ -22,6 +22,15 @@
     display: none;
 }
 
+.select-sport.football ~ :not(.football):not(.btn):not(.chkbox):not(.button) {
+    display: none;
+}
+
+.select-sport.football ~ p span:not(.football) {
+    display: none;
+}
+
+
 .select-sport.table-tennis ~ :not(.table-tennis):not(.btn):not(.button) {
     display: none;
 }

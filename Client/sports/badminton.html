@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/badminton.css"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЛКШ.Спорт</title>
+</head>
+
+<body>
+    <header>
+        <!-- Dropdown Structure -->
+        <ul id="sports-types" class="dropdown-content">
+            <li><a href="sports/football.html">Футбол</a></li>
+            <li class="divider"></li>
+            <li><a href="volleyball.html">Волейбол</a></li>
+            <li class="divider"></li>
+            <li><a href="streetball.html">Стритбол</a></li>
+            <li class="divider"></li>
+            <li><a href="table_tennis.html">Настольный теннис</a></li>
+            <li class="divider"></li>
+            <li><a href="poker.html">Покер</a></li>
+            <li class="divider"></li>
+            <li><a href="chess.html">Шахматы</a></li>
+            <li class="divider"></li>
+            <li><a href="water-polo.html">Водное поло</a></li>
+            <li class="divider"></li>
+            <li><a href="badminton.html">Бадминтон</a></li>
+            <li class="divider"></li>
+            <li><a href="mafia.html">Мафия</a></li>
+            <li class="divider"></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="../index.html"><img class="logo" width="50px" height="50px" src="../images/logo.jpg"/></a>
+                <a class="brand-logo">ЛКШ.Спорт</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#" data-target="sports-types">Выбрать спорт<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="../timetable.html">Расписание</a></li>
+                    <li><a href="../register.html">Зарегистрировать участника</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Бадминтон</h1>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3">
+                        <a href="#results">Результаты</a>
+                    </li>
+                    <li class="tab col s3">
+                        <a href="#timetable">Расписание</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a target="_self" href="../content/badminton_net.svg">Сетка</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#participants">Список участников</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#rules">Правила</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="results" class="col s12">
+                <table class="ttt center">
+                    <tr>
+                        <th>Время</th>
+                        <th>Игра</th>
+                    </tr>
+                    <tr>
+                        <td>25.07 18:30</td>
+                        <td>Сергей Лоптев <div class="parallel">физрук</div> <div class="result">3 : 1</div> Александр 
+                            Богданов <div class="parallel">А8</div></td>            
+                    </tr>    
+                </table>
+            </div>
+            <div id="timetable" class="col s12 timetable">
+                <table class="ttt center">
+                    <tr>
+                        <th>Предстоящие игры</th>
+                    </tr>
+                    <tr>
+                        <td>Лоптев <div class="parallel">А8</div> - Богданов <div class="parallel">А7</div></td>
+                    </tr>
+                    <tr>
+                        <td>Лоптев <div class="parallel">А8</div> - Богданов <div class="parallel">А7</div></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="participants" class="col s12">
+                <table class="ttt">
+                    <tr>
+                        <th>Список участников</th>
+                    </tr>
+                    <tr>
+                        <td>Лоптев Сергей <div class="parallel">физрук</div></td>
+                    </tr>
+                    <tr>
+                        <td>Богданов Александр <div class="parallel">А8.преп</div></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="rules">
+                <div class="col s10 offset-s1">
+                    <h2>Правила</h2>
+                    <h3>Жеребьёвка</h3> 
+                    <p>
+                        Перед началом матча проводится жеребьёвка. Сторона, выигравшая жребий, может выбрать<br>
+                        а) подавать или принимать подачу, <br>
+                        б) начинать игру на одной или другой стороне корта. <br>
+                        Сторона, проигравшая жеребьёвку, после этого, делает оставшийся выбор.
+                    </p>    
+                    <h3>Счёт</h3> 
+                    <p>
+                        Матч должен состоять, максимум, из трех геймов(чтобы победить, нужно выиграть два гейма). Гейм 
+                        выигрывает сторона, первой набравшая 11 очков. При счете «10-10» сторона, которая первая набирает 
+                        разницу в 2 очка, выигрывает гейм. При счёте «19-19» сторона, выигравшая 20-е очко, выигрывает гейм.<br>
+                        Стороне, выигравшей розыгрыш, засчитывается очко. Сторона может выиграть розыгрыш, если соперник(и) 
+                        допускают ошибку или если волан вышел из игры, коснувшись поверхности корта на стороне соперника(ов).<br>
+                        Сторона, выигравшая гейм, первой подает в следующем гейме.
+                    </p>
+                    <h3>Смена сторон</h3> 
+                    <p>
+                        После каждого гейма игроки должны меняться сторонами.
+                    </p>
+                    <h3>Подача</h3>
+                    <p>
+                        Подающий и принимающий должны стоять у противоположных углов площадки; <br>
+                        ракетка подающего должна первоначально ударить по головке волана;<br>
+                        весь волан должен находиться ниже талии подающего в момент удара по нему ракеткой;<br>
+                        стержень ракетки подающего, в момент удара по волану, должен быть направлен явно вниз;<br>
+                        полет волана должен быть направлен по восходящей линии oт ракетки подающего до пересечения им сетки, 
+                        так, чтобы, если он не будет отражен, упал к противоположному углу площадки;<br>
+                        Подающий не должен подавать, пока не подготовился принимающий, но следует считать последнего готовым 
+                        к приему, если он сделал попытку отразить поданный волан.<br><br>
+                        Игроки должны подавать (и принимать) со своего правого поля подачи, когда подающий не имеет очков или 
+                        имеет четное количество очков в этом гейме.<br>
+                        Игроки должны подавать (и принимать) со своего левого поля подачи, когда подающий имеет нечетное 
+                        количество очков в этом гейме. <br><br>
+                        Если подающий выигрывает розыгрыш, ему засчитывается очко. Затем он снова начинает подачу с другого 
+                        поля.<br>
+                        Если розыгрыш выигрывает принимающий, ему засчитывается очко. Затем принимающий становится новым 
+                        подающим.
+                    </p>
+                    <h3>Непрерывность игры</h3>
+                    <p>    
+                        Игра должна продолжаться непрерывно от первой подачи до завершения матча, исключая перерывы между 
+                        геймами длительностью не более 2-х минут<br> 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <h5>Контакты:</h5>
+            <p>
+                <span><img height="12px" src="../images/telegram.svg"/> @beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/vk.svg"/> vk.com/beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/gmail.svg"/> thatishero@gmail.com</span>
+            </p>
+        </div>
+        <div class="footer-copyright">
+            <span class="copyright">© Сергей Лоптев, Александр Богданов, 2019</span>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/badminton.js"></script>
+</body>

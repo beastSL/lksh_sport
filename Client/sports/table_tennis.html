@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="../css/badminton.css"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЛКШ.Спорт</title>
+</head>
+
+<body>
+    <header>
+        <!-- Dropdown Structure -->
+        <ul id="sports-types" class="dropdown-content">
+            <li><a href="sports/football.html">Футбол</a></li>
+            <li class="divider"></li>
+            <li><a href="volleyball.html">Волейбол</a></li>
+            <li class="divider"></li>
+            <li><a href="streetball.html">Стритбол</a></li>
+            <li class="divider"></li>
+            <li><a href="table_tennis.html">Настольный теннис</a></li>
+            <li class="divider"></li>
+            <li><a href="poker.html">Покер</a></li>
+            <li class="divider"></li>
+            <li><a href="chess.html">Шахматы</a></li>
+            <li class="divider"></li>
+            <li><a href="water-polo.html">Водное поло</a></li>
+            <li class="divider"></li>
+            <li><a href="badminton.html">Бадминтон</a></li>
+            <li class="divider"></li>
+            <li><a href="mafia.html">Мафия</a></li>
+            <li class="divider"></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="../index.html"><img class="logo" width="50px" height="50px" src="../images/logo.jpg"/></a>
+                <a class="brand-logo">ЛКШ.Спорт</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#" data-target="sports-types">Выбрать спорт<i
+                                class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="../timetable.html">Расписание</a></li>
+                    <li><a href="../register.html">Зарегистрировать участника</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Настольный теннис</h1>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3">
+                        <a href="#results">Результаты</a>
+                    </li>
+                    <li class="tab col s3">
+                        <a href="#timetable">Расписание</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a target="_self" href="../content/table_tennis_net.svg">Сетка</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#participants">Список участников</a>
+                    </li>
+                    <li class="tab col s2">
+                        <a href="#rules">Правила</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="results" class="col s12">
+                <table class="ttt center">
+                    <tr>
+                        <th>Время</th>
+                        <th>Игра</th>
+                    </tr>
+                    <tr>
+                        <td>25.07 18:30</td>
+                        <td>Сергей Лоптев <div class="parallel">физрук</div> <div class="result">3 : 1</div> Александр 
+                            Богданов <div class="parallel">А8</div></td>            
+                    </tr>    
+                </table>
+            </div>
+            <div id="timetable" class="col s12 timetable">
+                <table class="ttt center">
+                    <tr>
+                        <th>Предстоящие игры</th>
+                    </tr>
+                    <tr>
+                        <td>Лоптев <div class="parallel">А8</div> - Богданов <div class="parallel">А7</div></td>
+                    </tr>
+                    <tr>
+                        <td>Лоптев <div class="parallel">А8</div> - Богданов <div class="parallel">А7</div></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="participants" class="col s12">
+                <table class="ttt">
+                    <tr>
+                        <th>Список участников</th>
+                    </tr>
+                    <tr>
+                        <td>Лоптев Сергей <div class="parallel">физрук</div></td>
+                    </tr>
+                    <tr>
+                        <td>Богданов Александр <div class="parallel">А8.преп</div></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="rules">
+                <div class="col s10 offset-s1">
+                    <h2>Правила</h2>
+                    <h3>Общие правила</h3>
+                    <p>Партия состоит из розыгрышей, каждый из которых начинается с подачи. Первый подающий обычно 
+                    определяется жребием. Далее подающие чередуются каждые две подачи. По современным правилам партия идет до 
+                    11 очков. В случае равного счёта 10:10 подача переходит к другому игроку после каждого розыгрыша 
+                    до тех пор, пока отрыв не составит два очка. Игра проводится до победы одного из игроков в двух партиях.
+                    Во время игры, если мяч зацепил сетку и переместился на другую половину, то игра продолжается.</p>
+                    <h3>Подача</h3>
+                    <p>
+                        Подача в настольном теннисе производится согласно следующим правилам:<br><br>                   
+                        Мяч должен быть подброшен вертикально вверх с открытой ладони не менее чем на 16 см, и от момента 
+                        отрыва от ладони до соударения с ракеткой должен быть обязательно выше, чем поверхность стола и за 
+                        пределами концевой линии края стола.<br>
+                        Подающий должен ударить по мячу так, чтобы тот ударился один раз на своей половине и хотя бы один раз 
+                        на половине соперника.<br>
+                        Подача должна выполняться так, чтобы принимающий и судья ясно видели все фазы подачи. Нельзя, к 
+                        примеру, скрывать момент подачи рукой, в которой находится ракетка, телом или одеждой.<br>
+                        Подача считается поданной, как только мяч оторвался от ладони подающего.<br>
+                        Если мяч зацепил при подаче сетку, но при этом все остальные правила были соблюдены, объявляется 
+                        «переподача» — подающий должен повторить подачу.<br>
+                        После успешной подачи все остальные удары должны быть сделаны так, чтобы мяч ударялся только на 
+                        половине соперника.
+                    </p>  
+                    <h3>Начисление очков</h3>
+                    <p>
+                        Очки начисляются сопернику в том случае, когда игрок сделал одну из следующих ошибок:<br>
+                        <br>
+                        <ol>
+                            <li>Ошибка при подаче (например, мяч попал в сетку);</li>
+                            <li>Неправильная подача (например, мяч не был подкинут на 16 см);</li>
+                            <li>Мяч при подаче ударился два раза на своей стороне;</li>
+                            <li>Мяч попал на свою сторону после удара ракеткой;</li>
+                            <li>Мяч был ударен дважды (так как рука от запястья считается по правилам частью ракетки, то если мяч 
+                                попал по пальцам, а затем по ракетке, он считается ударенным дважды);</li>
+                            <li>Мяч попал во что угодно, кроме ракетки, после отскока от стола (например, в пол или в игрока);</li>
+                            <li>Мяч не попал по стороне соперника после удара;</li>
+                            <li>Мяч был отбит до того, как ударился об стол;</li>
+                            <li>Стол был подвинут или свободная рука коснулась стола;</li>
+                            <li>Мяч при подаче не попал в зону соперника.</li>
+                        </ol>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <h5>Контакты:</h5>
+            <p>
+                <span><img height="12px" src="../images/telegram.svg"/> @beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/vk.svg"/> vk.com/beast_sl</span>
+                <br>
+                <span><img height="12px" src="../images/gmail.svg"/> thatishero@gmail.com</span>
+            </p>
+        </div>
+        <div class="footer-copyright">
+            <span class="copyright">© Сергей Лоптев, Александр Богданов, 2019</span>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/badminton.js"></script>
+</body>

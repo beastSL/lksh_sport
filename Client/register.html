@@ -4,11 +4,8 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/register.css"/>
     <link rel="stylesheet" href="css/main.css"/>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
-    <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ЛКШ.Спорт - Регистрация</title>
@@ -18,6 +15,8 @@
     <header>
         <!-- Dropdown Structure -->
         <ul id="sports-types" class="dropdown-content">
+            <li><a href="sports/football.html">Футбол</a></li>
+            <li class="divider"></li>
             <li><a href="sports/volleyball.html">Волейбол</a></li>
             <li class="divider"></li>
             <li><a href="sports/streetball.html">Стритбол</a></li>
@@ -56,6 +55,7 @@
                 <div class="input-field col s5">
                     <select name="sports-type">
                         <option value="not-chosen" selected></option>
+                        <option value="football">Футбол</option>
                         <option value="volleyball">Волейбол</option>
                         <option value="streetball">Стритбол</option>
                         <option value="table-tennis">Настольный теннис</option>
@@ -84,9 +84,9 @@
             </div>
             <p class="volleyball streetball water-polo flow-text">Введите состав команды. Указывайте участников в формате 
                 Фамилия Имя.(без точки) В команде должно быть <span class="volleyball highlight">от 6 до 8</span><span 
-                class="streetball highlight">от 3 до 4</span><span class="water-polo highlight">5</span> игроков. 
+                class="streetball football highlight">от 3 до 4</span><span class="water-polo highlight">5</span> игроков. 
                 Параллель не указывайте, мы подберём её сами.</p>  
-            <div class="row volleyball streetball water-polo">
+            <div class="row volleyball streetball water-polo football">
                 <div class="input-field col s6">
                     <input name="participant-1" type="text" class="validate" id="participant-1-id"/>
                     <label for="participant-1-id">Участник 1:</label>
@@ -96,7 +96,7 @@
                     <label for="participant-2-id">Участник 2:</label>
                 </div>
             </div>
-            <div class="row volleyball streetball water-polo">
+            <div class="row volleyball streetball water-polo football">
                 <div class="input-field col s6">
                     <input name="participant-3" type="text" id="participant-3-id" class="validate"/>
                     <label for="participant-3-id">Участник 3:</label>
