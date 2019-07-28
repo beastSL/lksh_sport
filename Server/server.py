@@ -3,7 +3,7 @@ from flask_restful import Resource, Api, reqparse
 from flask_sqlalchemy import SQLAlchemy
 from flask_jsonpify import jsonify
 from flask_cors import CORS
-from json import dumps
+from json import dumps, loads
 from datetime import datetime
 from hashlib import md5
 import bot
@@ -26,6 +26,19 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
 )
+
+jsonfile = open('participants.json', 'r')
+participants = loads(jsonfile, encoding='utf-8')
+groups = {}
+teachers = []
+
+for p in participants:
+    if p['teacher']:
+        teachers.append(p)
+    groups[p['name']] = p['group']
+
+
+# Classes responsible for db work
 
 
 class Participant(db.Model):
@@ -136,7 +149,7 @@ class RegisterTeam(Resource):
         applications[args['hash']] = args
         sport = Sport.query.filter_by(name=args['sport']).first()
         if args['no-team']:
-            part_name = args['participant']
+            part_name = args['participant'] + groups[args['participant']]
             if existsParticipant(part_name, sport.id):
                 return 'There is already a participant with the same name '
                 'registered for this sport'
@@ -155,7 +168,9 @@ class RegisterTeam(Resource):
             part_name = f'participant-{i}'
 
             while args.get(part_name, '') != '':
-                if existsParticipant(args[part_name], sport.id):
+                if existsParticipant(
+                        args[part_name] + groups[args[part_name]],
+                        sport.id):
                     illegal_participants.append(args[part_name])
                 i += 1
                 part_name = args.get(f'participant-{i}', '')

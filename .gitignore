@@ -2,3 +2,6 @@ config.py
 .vscode
 venv
 __pycache__
+2019.csv
+participants.json
+csv_to_db.py

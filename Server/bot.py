@@ -63,7 +63,7 @@ def stop(update, context):
 
 
 def requestApproval(args):
-    sirgay_id = '228546319'
+    sirgay_id = cfg.sirgay_id
     reply_markup = InlineKeyboardMarkup(
         [[
             InlineKeyboardButton(
@@ -124,7 +124,7 @@ def denyRegistration(args_hash):
 
 
 def success(args_hash, result):
-    sirgay_id = '228546319'
+    sirgay_id = cfg.sirgay_id
     updater.bot.send_message(
         chat_id=sirgay_id,
         text=f'Заявка с кодовым номером\n№{args_hash}\nбыла успешно {result}'
