@@ -43,6 +43,12 @@ class Participant(db.Model):
     def __repr__(self):
         return f'<Participant(name=\"{self.name}\")>'
 
+    def toDict(self):
+        return {
+            'name': self.name,
+            'team': self.team.name
+        }
+
 
 class Team(db.Model):
     __tablename__ = 'team'
@@ -81,7 +87,7 @@ class Event(db.Model):
     name = db.Column(db.String)
     team1_id = db.Column(db.Integer, db.ForeignKey('team.id'))
     team2_id = db.Column(db.Integer, db.ForeignKey('team.id'))
-    time = db.Column(db.Time)
+    time = db.Column(db.DateTime)
     sport_id = db.Column(db.Integer, db.ForeignKey('sport.id'))
     place = db.Column(db.String)
 
@@ -94,6 +100,16 @@ class Event(db.Model):
         foreign_keys=[team2_id]
     )
     sport = db.relationship('Sport', back_populates='events')
+
+    def toDict(self):
+        return {
+            'name': self.name,
+            'time': self.time,
+            'team1': self.team1.name,
+            'team2': self.team2.name,
+            'sport': self.sport.name,
+            'place': self.place
+        }
 
 
 # classes responsible for request handling
@@ -136,18 +152,18 @@ class RegisterTeam(Resource):
                 )
             illegal_participants = []
             i = 1
-            part_name = args[f'participant-{i}']
+            part_name = f'participant-{i}'
 
             while args.get(part_name, '') != '':
-                if existsParticipant(part_name, sport.id):
-                    illegal_participants.append(part_name)
+                if existsParticipant(args[part_name], sport.id):
+                    illegal_participants.append(args[part_name])
                 i += 1
                 part_name = args.get(f'participant-{i}', '')
 
             if len(illegal_participants) > 0:
                 response = 'These people are already registered '
-                'for this sport in different teams:\n'
-                response += '\n'.join(illegal_participants)
+                response += 'for this sport in another team(s):<br/>'
+                response += '<br/>'.join(illegal_participants)
                 return response
             else:
                 bot.requestApproval(args)
@@ -155,14 +171,23 @@ class RegisterTeam(Resource):
         return jsonify(
             {
                 'message':
-                'Your application is resieved and will soon be reviewed'
+                'Your application is received and will soon be reviewed'
             }
         )
 
 
 class Events(Resource):
     def get(self):
-        return jsonify({'fuck': 'sirgay'})
+        events = [x.toDict() for x in Event.query.all()]
+        return jsonify(events)
+
+
+class Participants(Resource):
+    def get(self):
+        args = part_parser.parse_args()
+        participants = Participant.query.filter_by(
+            sport_id=Sport.query.filter_by(name=cfg.sports[args['sport']]).first().id)
+        return jsonify([x.toDict() for x in participants])
 
 
 class Approve(Resource):
@@ -170,13 +195,14 @@ class Approve(Resource):
         token = aprv_parser.parse_args()['token']
         args = applications[token]
         sport = Sport.query.filter_by(name=args['sport']).first()
-        if args['no-team'] is not None:
+        if args['no-team'] is not None or args['sport'] in cfg.solo_sports:
             p = Participant(
                 name=args['participant'],
                 team_id=69420,
                 sport_id=sport.id
             )
             db.session.add(p)
+            db.session.commit()
         else:
             participants = []
             t = Team(name=args['team-name'], sport_id=sport.id)
@@ -208,7 +234,9 @@ db.create_all()
 
 for sport in cfg.sports.values():
     if Sport.query.filter_by(name=sport).first() is None:
-        db.session.add(Sport(name=sport))
+        sp = Sport(name=sport)
+        db.session.add(sp)
+        db.commit()
     db.session.commit()
 
 reg_parser = reqparse.RequestParser()
@@ -222,8 +250,12 @@ for i in range(8):
 aprv_parser = reqparse.RequestParser()
 aprv_parser.add_argument('token')
 
+part_parser = reqparse.RequestParser()
+part_parser.add_argument('sport')
+
 api.add_resource(RegisterTeam, '/api/register_team')
 api.add_resource(Events, '/api/events')
+api.add_resource(Participants, '/api/participants')
 api.add_resource(Approve, '/api/admin/approve_registration')
 
 if __name__ == '__main__':
@@ -231,7 +263,8 @@ if __name__ == '__main__':
         target=app.run, kwargs={
             'debug': False,
             'use_reloader': False,
-            'port': 42069
+            'port': 42069,
+            'host': '0.0.0.0'
         }
     )
     flask_thread.start()

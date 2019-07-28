@@ -10,13 +10,13 @@ request_kwargs = {
     # 'proxy_url': cfg.proxy_url,
     # # Optional, if you need authentication:
     # 'urllib3_proxy_kwargs': {
-    #     'username': cfg.proxy_user,
-    #     'password': cfg.proxy_pass,
+    #    'username': cfg.proxy_user,
+    #    'password': cfg.proxy_pass,
     # }
 }
 updater = Updater(
     token=cfg.tg_token,
-    request_kwargs=request_kwargs,
+    # request_kwargs=request_kwargs,
     use_context=True
 )
 dispatcher = updater.dispatcher
@@ -76,16 +76,15 @@ def requestApproval(args):
             )
         ]]
     )
-    text = f'Поступила новая заявка на регистрацию\n`#{args["hash"]}`\n'
+    text = f'Поступила новая заявка на регистрацию\n№{args["hash"]}\n'
     if args['no-team'] is not None:
         text += f'Одиночный участник\n'
-        f'Имя, фамилия: {args["participant"]}\n'
-        f'Спорт: {args["sport"]}'
+        text += f'Имя, фамилия: {args["participant"]}\n'
+        text += f'Спорт: {args["sport"]}'
         updater.bot.send_message(
             chat_id=sirgay_id,
             text=text,
-            reply_markup=reply_markup,
-            parse_mode=parsemode.ParseMode.MARKDOWN
+            reply_markup=reply_markup
         )
     else:
         text += f'Название команды: {args["team-name"]}\n'
@@ -97,8 +96,7 @@ def requestApproval(args):
         updater.bot.send_message(
             chat_id=sirgay_id,
             text=text,
-            reply_markup=reply_markup,
-            parse_mode=parsemode.ParseMode.MARKDOWN
+            reply_markup=reply_markup
         )
 
 
@@ -129,8 +127,7 @@ def success(args_hash, result):
     sirgay_id = '228546319'
     updater.bot.send_message(
         chat_id=sirgay_id,
-        text=f'Заявка с кодовым номером\n`#{args_hash}`\nбыла успешно {result}',
-        parse_mode=parsemode.ParseMode.MARKDOWN
+        text=f'Заявка с кодовым номером\n№{args_hash}\nбыла успешно {result}'
     )
 
 
