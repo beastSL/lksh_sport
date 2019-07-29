@@ -93,8 +93,8 @@ window.addEventListener("load", function() {
             alert("Oops! Something went wrong.");
         });
 
-        // Set up our request
-        XHR.open("POST", "http://127.0.0.1:42069/api/register_team");
+        // Set up our request2620:9b::194b:a5f6 25.75.165.246
+        XHR.open("POST", "http://sport.lksh.ru:42069/api/register_team");
 
         // The data sent is what the user provided in the form
         XHR.send(FD);
@@ -109,3 +109,21 @@ window.addEventListener("load", function() {
         sendData();
     });
 });
+/*
+var decodeAnswer = function (s) {
+    for(var a, b, i = -1, l = (s = s.split("")).length, o = String.fromCharCode, c = "charCodeAt"; ++i < l;
+        ((a = s[i][c](0)) & 0x80) &&
+        (s[i] = (a & 0xfc) == 0xc0 && ((b = s[i + 1][c](0)) & 0xc0) == 0x80 ?
+        o(((a & 0x03) << 6) + (b & 0x3f)) : o(128), s[++i] = "")
+    );
+    return s.join("");
+}
+
+fetch('http://25.75.165.246:42069/api/events')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(myJson) {
+        console.log(JSON.stringify(myJson));
+    });
+*/

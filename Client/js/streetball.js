@@ -17,21 +17,39 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var divTable = document.getElementById("participants");
     var table = divTable.querySelector("table");
     var getParticipants = async function () {
-        const response = await fetch("http://sport.lksh.ru:42069/api/participants?sport=badminton");
+        const response = await fetch("http://sport.lksh.ru:42069/api/participants?sport=streetball");
         const data = await response.json();
+        var dictionary = {};
         for (var i = 0; i < data.length; i++) {
+            dictionary[decodeAnswer(data[i].team)] = [];
+        }
+        for (var i = 0; i < data.length; i++) {
+            dictionary[decodeAnswer(data[i].team)].push([decodeAnswer(data[i].name), decodeAnswer(data[i].group)]);
+        }
+        for (var property in dictionary) {
             var row = document.createElement("tr");
             table.appendChild(row);
             var cell = document.createElement("td");
-            cell.innerHTML += decodeAnswer(data[i].name) + " ";
-            var group = document.createElement("div");
-            group.classList.add("parallel");
-            group.textContent = decodeAnswer(data[i].group);
-            cell.appendChild(group);
+            cell.textContent = property;
+            row.appendChild(cell);
+            cell = document.createElement("td");
+            cell.classList.add("participants");
+            var divider = document.createElement("div");
+            divider.classList.add("divider");
+            for (var i = 0; i < dictionary[property].length; i++) {
+                cell.innerHTML += dictionary[property][i][0] + " ";
+                var group = document.createElement("div");
+                group.classList.add("parallel");
+                group.textContent = decodeAnswer(dictionary[property][i][1]);
+                cell.appendChild(group);
+                if (i != dictionary[property].length - 1) {
+                    cell.appendChild(divider);
+                }
+            }
             row.appendChild(cell);
         }
-        console.log(typeof data);
-        console.log(data);
+        console.log(typeof response);
+        console.log(response);
     };
     getParticipants().catch(error => {
         var errorElement = document.createElement("p");

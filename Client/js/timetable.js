@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 document.addEventListener("DOMContentLoaded", function(event) {
     var sportsTypes = [
         "not-chosen",
+        "football",
         "volleyball",
         "streetball",
         "table-tennis",

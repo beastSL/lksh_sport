@@ -11,13 +11,13 @@ var decodeAnswer = function (s) {
         o(((a & 0x03) << 6) + (b & 0x3f)) : o(128), s[++i] = "")
     );
     return s.join("");
-};
+}
 
 document.addEventListener("DOMContentLoaded", function(event) {
     var divTable = document.getElementById("participants");
     var table = divTable.querySelector("table");
     var getParticipants = async function () {
-        const response = await fetch("http://sport.lksh.ru:42069/api/participants?sport=badminton");
+        const response = await fetch("http://sport.lksh.ru:42069/api/participants?sport=chess");
         const data = await response.json();
         for (var i = 0; i < data.length; i++) {
             var row = document.createElement("tr");

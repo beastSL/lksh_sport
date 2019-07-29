@@ -6,3 +6,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         coverTrigger: false
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {edge: "right"});
+});

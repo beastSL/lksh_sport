@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var divTable = document.getElementById("participants");
     var table = divTable.querySelector("table");
     var getParticipants = async function () {
-        const response = await fetch("http://sport.lksh.ru:42069/api/participants?sport=badminton");
+        const response = await fetch("http://sport.lksh.ru:42069/api/participants?sport=table-tennis");
         const data = await response.json();
         for (var i = 0; i < data.length; i++) {
             var row = document.createElement("tr");

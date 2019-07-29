@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="../css/streetball.css"/>
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../css/materialize.css" media="screen,projection" />
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ЛКШ.Спорт</title>
 </head>
 
@@ -15,7 +13,7 @@
     <header>
         <!-- Dropdown Structure -->
         <ul id="sports-types" class="dropdown-content">
-            <li><a href="sports/football.html">Футбол</a></li>
+            <li><a href="football.html">Футбол</a></li>
             <li class="divider"></li>
             <li><a href="volleyball.html">Волейбол</a></li>
             <li class="divider"></li>
@@ -38,6 +36,7 @@
             <div class="nav-wrapper">
                 <a href="../index.html"><img class="logo" width="50px" height="50px" src="../images/logo.jpg"/></a>
                 <a class="brand-logo">ЛКШ.Спорт</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a class="dropdown-trigger" href="#" data-target="sports-types">Выбрать спорт<i
                                 class="material-icons right">arrow_drop_down</i></a></li>
@@ -46,23 +45,27 @@
                 </ul>
             </div>
         </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="../timetable.html">Расписание</a></li>
+            <li><a href="../register.html">Зарегистрировать участника</a></li>
+        </ul>
     </header>
     <main>
         <h1>Волейбол</h1>
         <div class="row">
             <div class="col s12">
                 <ul class="tabs">
-                    <li class="tab col s3">
+                    <li class="tab col s3 disabled">
                         <a href="#results">Результаты</a>
                     </li>
-                    <li class="tab col s3">
+                    <li class="tab col s3 disabled">
                         <a href="#timetable">Расписание</a>
                     </li>
-                    <li class="tab col s2">
+                    <li class="tab col s2 disabled">
                         <a href="#net">Сетка</a>
                     </li>
                     <li class="tab col s2">
-                        <a href="#participants">Список участников</a>
+                        <a class="active" href="#participants">Список участников</a>
                     </li>
                     <li class="tab col s2">
                         <a href="#rules">Правила</a>
@@ -75,10 +78,6 @@
                         <th>Дата</th>
                         <th>Результат</th>
                     </tr>
-                    <tr>
-                        <td>25.07 18:30</td>
-                        <td>Барселона <div class="result">3 : 1</div> Реал</td>
-                    </tr>
                 </table>
             </div>
             <div id="timetable" class="col s12">
@@ -86,10 +85,6 @@
                     <tr>
                         <th>Дата</th>
                         <th>Игра</th>
-                    </tr>
-                    <tr>
-                        <td>30.07 18:30</td>
-                        <td>Реал - Барселона</td>
                     </tr>
                 </table>
             </div>
@@ -104,38 +99,13 @@
                         </li>
                     </ul>
                 </div>
-                <div id="group">
-                    <h2>Группа 1</h2>
-                    <table>
-                        <tr>
-                            <th>Место</th>
-                            <th>Команда</th>
-                            <th>Побед</th>
-                            <th>Ничьих</th>
-                            <th>Поражений</th>
-                            <th>Очки</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Барселона</td>
-                            <td>3</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>9</td>
-                        </tr>
-                    </table>
-                </div> 
+                <div id="group"></div> 
             </div>
             <div id="participants" class="col s12">
                 <table class="narrow">
                     <tr>
-                        <th>Список участников</th>
-                    </tr>
-                    <tr>
-                        <td>Барселона</td>
-                    </tr>
-                    <tr>
-                        <td>Реал</td>
+                        <th>Команда</th>
+                        <th>Состав</th>
                     </tr>
                 </table>
             </div>
@@ -230,5 +200,5 @@
     </footer>
     <script type="text/javascript" src="../js/materialize.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
-    <script type="text/javascript" src="../js/badminton.js"></script>
+    <script type="text/javascript" src="../js/volleyball.js"></script>
 </body>

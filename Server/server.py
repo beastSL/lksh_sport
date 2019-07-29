@@ -28,7 +28,7 @@ logging.basicConfig(
 )
 
 jsonfile = open('participants.json', 'r')
-participants = loads(jsonfile, encoding='utf-8')
+participants = loads(jsonfile.read(), encoding='utf-8')
 groups = {}
 teachers = []
 
@@ -173,7 +173,7 @@ class RegisterTeam(Resource):
                         sport.id):
                     illegal_participants.append(args[part_name])
                 i += 1
-                part_name = args.get(f'participant-{i}', '')
+                part_name = f'participant-{i}'
 
             if len(illegal_participants) > 0:
                 response = 'These people are already registered '
@@ -251,7 +251,7 @@ for sport in cfg.sports.values():
     if Sport.query.filter_by(name=sport).first() is None:
         sp = Sport(name=sport)
         db.session.add(sp)
-        db.commit()
+        db.session.commit()
     db.session.commit()
 
 reg_parser = reqparse.RequestParser()

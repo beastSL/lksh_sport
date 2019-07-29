@@ -31,3 +31,7 @@ span {
 .center tr th, .center tr td {
     text-align: center;
 }
+
+.participants {
+    line-height: 2em;
+}
