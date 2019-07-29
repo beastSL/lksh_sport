@@ -27,13 +27,13 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-jsonfile = open('participants.json', 'r')
+jsonfile = open('participants.json', 'r').read()
 participants = loads(jsonfile, encoding='utf-8')
 groups = {}
 teachers = []
 
 for p in participants:
-    if p['teacher']:
+    if p['is_teacher']:
         teachers.append(p)
     groups[p['name']] = p['group']
 
@@ -251,7 +251,6 @@ for sport in cfg.sports.values():
     if Sport.query.filter_by(name=sport).first() is None:
         sp = Sport(name=sport)
         db.session.add(sp)
-        db.commit()
     db.session.commit()
 
 reg_parser = reqparse.RequestParser()

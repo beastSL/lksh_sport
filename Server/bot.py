@@ -21,8 +21,6 @@ updater = Updater(
 )
 dispatcher = updater.dispatcher
 
-admins_dict = load(open('admins.json', 'r'))
-
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
@@ -37,8 +35,6 @@ def logMessage(message):
 
 
 def start(update, context):
-    if update.message.chat.username in cfg.admins:
-        admins_dict[update.message.chat.username] = update.message.chat_id
     context.bot.send_message(
         chat_id=update.message.chat_id,
         text="The bot is ready" if update.message.chat.username in cfg.admins
@@ -141,4 +137,3 @@ dispatcher.add_handler(approve_handler)
 
 def init():
     updater.start_polling()
-    dump(admins_dict, open('admins.json', 'w'))
