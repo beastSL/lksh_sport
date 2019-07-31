@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             dictionary[decodeAnswer(data[i].team)] = [];
         }
         for (var i = 0; i < data.length; i++) {
-            dictionary[decodeAnswer(data[i].team)].push(decodeAnswer(data[i].name));
+            dictionary[decodeAnswer(data[i].team)].push([decodeAnswer(data[i].name), decodeAnswer(data[i].group)]);
         }
         for (var property in dictionary) {
             var row = document.createElement("tr");
@@ -37,7 +37,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
             var divider = document.createElement("div");
             divider.classList.add("divider");
             for (var i = 0; i < dictionary[property].length; i++) {
-                cell.innerHTML += dictionary[property][i];
+                cell.innerHTML += dictionary[property][i][0] + " ";
+                var group = document.createElement("div");
+                group.classList.add("parallel");
+                group.textContent = decodeAnswer(dictionary[property][i][1]);
+                cell.appendChild(group);
                 if (i != dictionary[property].length - 1) {
                     cell.appendChild(divider);
                 }

@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         [9, 9],
         [9, 9],
         [9, 9],
-        [0, 5],
+        [0, 4],
         [9, 9],
         [9, 9]
     ];
