@@ -55,14 +55,14 @@
         <div class="row">
             <div class="col s12">
                 <ul class="tabs">
-                    <li class="tab col s3 disabled">
+                    <li class="tab col s3">
                         <a href="#results">Результаты</a>
                     </li>
-                    <li class="tab col s3 disabled">
-                        <a href="#timetable">Расписание</a>
+                    <li class="tab col s3">
+                        <a class="active" href="#timetable">Расписание</a>
                     </li>
                     <li class="tab col s3">
-                        <a class="active" href="#participants">Список участников</a>
+                        <a href="#participants">Список участников</a>
                     </li>
                     <li class="tab col s3">
                         <a href="#rules">Правила</a>
@@ -70,25 +70,267 @@
                 </ul>
             </div> 
             <div id="results" class="col s12">
+                <p class ="flow-text">В столбце <span class="highlight">Стол</span> для каждого стола участники отсортированы по месту, 
+                    зелёный цвет означает проход в следующую стадию турнира, жёлтый &ndash; проход в wildcard, красный &ndash; непроход.</p>
                 <table>
                     <tr>
-                        <th>Место</th>
-                        <th>Участник</th>
-                        <th>Проход в следующий раунд</th>
+                        <th>Дата</th>
+                        <th>Номер стола</th>
+                        <th>Участники</th>
                     </tr>
-                </table>
-            </div>
-            <div id="timetable"></div>
-            <div id="participants" class="col s12">
-                <table class="ttt">
                     <tr>
-                        <th>Список участников</th>
+                        <td>11.08 16:45</td>
+                        <td>10</td>
+                        <td>
+                            <div class="redfont">Грицаев Тимофей <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Пискалов Дмитрий <div class="parallel">A0</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Ибраев Дмитрий <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Саютин Дмитрий <div class="parallel">A0.преп</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Маляровский Степан <div class="parallel">C9</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Третьяков Николай <div class="parallel">A0.преп</div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11.08 14:45</td>
+                        <td>9</td>
+                        <td>
+                            <div class="greenfont">Павлек Николай <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Солопов Юрий <div class="parallel">B9</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Филиппова Надежда <div class="parallel">A7</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Аджима Никита <div class="parallel">A7</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Карпов Иван <div class="parallel">B9</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Мусин Камиль <div class="parallel">B2.преп</div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10.08 16:45</td>
+                        <td>8</td>
+                        <td>
+                            <div class="redfont">Порфирьев Антон <div class="parallel">B7</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Кирьянов Григорий <div class="parallel">B1</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Павленко Даниил <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Лоптев Сергей <div class="parallel">физрук</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Татаркин Иван <div class="parallel">C9</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Громов Валентин <div class="parallel">B9</div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10.08 14:45</td>
+                        <td>7</td>
+                        <td>
+                            <div class="redfont">Харитонцев-Беглов Сергей <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Зайцев Юрий <div class="parallel">A8</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Галатенко Дмитрий <div class="parallel">A8</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Мандал Дмитрий <div class="parallel">B9</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Шемчик Евгений <div class="parallel">B8.преп</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Исмагилов Азат <div class="parallel">A0</div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>08.08 14:30</td>
+                        <td>6</td>
+                        <td>
+                            <div class="redfont">Ройтерштейн Антон <div class="parallel">A7</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Лоптев Сергей <div class="parallel">физрук</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Почепцов Игорь <div class="parallel">B1</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Исмагилов Азат <div class="parallel">A0</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Захаров Давид <div class="parallel">B2</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Абишев Виктор <div class="parallel">A8</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Панарин Александр <div class="parallel">A8</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Крылов Павел <div class="parallel">A8</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Ибраев Дмитрий <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Кирьянов Григорий <div class="parallel">B1</div></div>
+                            <div class="divider"></div>   
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>07.08 15:00</td>
+                        <td>5</td>
+                        <td>
+                            <div class="redfont">Фирсов Фёдор <div class="parallel">B7</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Тупикина Дарья <div class="parallel">культорг</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Татаркин Иван <div class="parallel">C9</div></div>
+                            <div class="divider"></div>
+                            <div class="yellowfont">Ройтерштейн Антон <div class="parallel">A7</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Филиппова Надежда <div class="parallel">A7</div></div>
+                            <div class="divider"></div>
+                            <div class="yellowfont">Лоптев Сергей <div class="parallel">физрук</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Клигунов Илья <div class="parallel">B1</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Карпов Иван <div class="parallel">B9</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Порфирьев Антон <div class="parallel">B7</div></div>
+                            <div class="divider"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>06.08 16:30</td>
+                        <td>4</td>
+                        <td>
+                            <div class="yellowfont">Почепцов Игорь <div class="parallel">B1</div></div>
+                            <div class="divider"></div>
+                            <div class="yellowfont">Исмагилов Азат <div class="parallel">A0</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Солопов Юрий <div class="parallel">B9</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Стёпкин Степан <div class="parallel">A7</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Галатенко Дмитрий <div class="parallel">A8</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Алентьев Игорь <div class="parallel">A7</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Мусин Камиль <div class="parallel">B2.преп</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Громов Валентин <div class="parallel">B9</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Лупильцев Георгий <div class="parallel">C9</div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>06.08 15:00</td>
+                        <td>3</td>
+                        <td>
+                            <div class="yellowfont">Захаров Давид <div class="parallel">B2</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Осетров Фёдор <div class="parallel">B2</div></div>
+                            <div class="divider"></div>
+                            <div class="yellowfont">Абишев Виктор <div class="parallel">A8</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Аджима Никита <div class="parallel">A7</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Маляровский Степан <div class="parallel">C9</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Саютин Дмитрий <div class="parallel">A0.преп</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Третьяков Николай <div class="parallel">A0.преп</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Королёва Таисия <div class="parallel">C2</div></div>
+                            <div class="divider"></div>
+                            <div class="redfontb">Делекторский Алексей <div class="parallel">B7</div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>05.08 16:30</td>
+                        <td>2</td>
+                        <td>
+                            <div class="redfont">Муратиди Георгий <div class="parallel">A7</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Паненков Семён <div class="parallel">A7</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Зайцев Юрий <div class="parallel">A8</div></div>
+                            <div class="divider"></div>
+                            <div class="yellowfont">Панарин Александр <div class="parallel">A8</div></div>
+                            <div class="divider"></div>
+                            <div class="yellowfont">Крылов Павел <div class="parallel">A8</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Кириллов Арсений <div class="parallel">A7.преп</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Грицаев Тимофей <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Павлек Николай <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Шемчик Евгений <div class="parallel">B8.преп</div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>05.08 15:00</td>
+                        <td>1</td>
+                        <td>
+                            <div class="greenfont">Пискалов Дмитрий <div class="parallel">A0</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Одинцов Андрей <div class="parallel">A0</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Харитонцев-Беглов Сергей <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Павленко Даниил <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Акилов Денис <div class="parallel">A8</div></div>
+                            <div class="divider"></div>
+                            <div class="redfont">Канатулы Аманбол <div class="parallel">B</div></div>
+                            <div class="divider"></div>
+                            <div class="yellowfont">Ибраев Дмитрий <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div class="greenfont">Мандал Дмитрий <div class="parallel">B9</div></div>
+                            <div class="divider"></div>
+                            <div class="yellowfont">Кирьянов Григорий <div class="parallel">B1</div></div>
+                        </td>
                     </tr>
                 </table>
             </div>
-            <div id="rules">
-                <div class="col s10 offset-s1">
-                    <h2>Правила</h2>
+            <div id="timetable">
+                <h1>Финал</h1>
+                <table>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Номер стола</th>
+                        <th>Участники</th>
+                    </tr>
+                    <tr>
+                        <td>14.08</td>
+                        <td>13</td>
+                        <td>
+                            <div>Ибраев Дмитрий <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div>Третьяков Николай <div class="parallel">A0.преп</div></div>
+                            <div class="divider"></div>
+                            <div>Павлек Николай <div class="parallel">A1</div>
+                            <div class="divider"></div>
+                            <div>Филиппова Надежда <div class="parallel">A7</div></div>
+                            <div class="divider"></div>
+                            <div>Кирьянов Григорий <div class="parallel">B1</div></div>
+                            <div class="divider"></div>
+                            <div>Павленко Даниил <div class="parallel">A1</div></div>
+                            <div class="divider"></div>
+                            <div>Зайцев Юрий <div class="parallel">A8</div>
+                            <div class="divider"></div>
+                            <div>Галатенко Дмитрий <div class="parallel">A8</div></div>
+                        </td>
+                    </tr>  
+                </table>
+                </div>
+                <div id="participants" class="col s12">
+                    <table class="ttt">
+                        <tr>
+                            <th>Список участников</th>
+                        </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                    </table>
+                </div>
+                <div id="rules">
+                    <div class="col s10 offset-s1">
+                        <h2>Правила</h2>
                     <h3>Выигрышные комбинации классического покера</h3>
                     <p>
                         Обладателем банка игры будет тот, у кого на руках окажется самая высокая комбинация из карт.
@@ -112,6 +354,9 @@
                         Самая младшая комбинация «Старшая карта» – это 1 карта. Чем она выше по рангу, тем вероятнее ее 
                         победа.
                     </p>
+                    <h3>Шкала повышения блайндов в ЛКШатском покере</h3>
+                    <img src="../content/poker_blinds.PNG"/>
+                    <p>Блайнд повышается каждые 10 минут.</p>
                     <h3>Правила игры в классический покер</h3>
                     <p>
                         В игре может участвовать от 2 до 10 человек. Каждому игроку в Техасском Холдеме раздается по две 

@@ -106,8 +106,9 @@ img:not(.logo) {
     margin-left: 30px;
 }
 
-.highlight {
+span.highlight {
     color: #ff7046;
+    display: inline;
 }
 
 .copyright {

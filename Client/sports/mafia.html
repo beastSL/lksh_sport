@@ -55,32 +55,491 @@
         <div class="row">
             <div class="col s12">
                 <ul class="tabs">
-                    <li class="tab col s3 disabled">
+                    <li class="tab col s3">
                         <a href="#results">Результаты</a>
                     </li>
-                    <li class="tab col s3 disabled">
-                        <a href="#timetable">Расписание</a>
+                    <li class="tab col s3">
+                        <a class="active" href="#timetable">Расписание</a>
                     </li>
-                    <li class="tab col s2 disabled">
+                    <li class="tab col s2">
                         <a href="#table">Таблица</a>
                     </li>
                     <li class="tab col s2">
-                        <a class="active" href="#participants">Список участников</a>
+                        <a href="#participants">Список участников</a>
                     </li>
                     <li class="tab col s2">
                         <a href="#rules">Правила</a>
                     </li>
                 </ul>
             </div> 
-            <div id="results" class="col s12"></div>
-            <div id="timetable"></div>
+            <div id="results" class="col s12">
+                <table>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Номер стола</th>
+                        <th>Результат</th>
+                        <th>Участники, роли, очки за матч</th>
+                    </tr>
+                    <tr>
+                        <td>13.08 19:30</td>
+                        <td>13, 14, 15</td>
+                        <td></td>
+                        <td>
+                            Павлек Николай <div class="parallel">A1</div>, 6
+                            <div class="divider"></div>
+                            Панарин Александр <div class="parallel">A7</div>, 13
+                            <div class="divider"></div>
+                            Люлько Алексей <div class="parallel">C1</div>, 8
+                            <div class="divider"></div>
+                            Аджима Никита <div class="parallel">A7</div>, 7
+                            <div class="divider"></div>
+                            Остапенко Владислав <div class="parallel">C1</div>, 8
+                            <div class="divider"></div>
+                            Смирнов Владислав <div class="parallel">C2</div>, 9
+                            <div class="divider"></div>
+                            Грицаев Тимофей <div class="parallel">A1</div>, 8
+                            <div class="divider"></div>
+                            Оздоев Адам <div class="parallel">C1</div>, 2
+                            <div class="divider"></div>
+                            Почепцов Игорь <div class="parallel">B1</div>, 12
+                            <div class="divider"></div>
+                            Пискалов Дмитрий <div class="parallel">A0</div>, 8
+                            <div class="divider"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10.08 21:00</td>
+                        <td>12</td>
+                        <td><div class="redfont">Победа мирных</div></td>
+                        <td>
+                            <div>Панарин Александр <div class="parallel">A8</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Грицаев Тимофей <div class="parallel">A1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Долгопол Кирилл <div class="parallel">C9</div>, дон, -1</div>
+                            <div class="divider"></div>
+                            <div>Захаров Давид <div class="parallel">B2</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Почепцов Игорь <div class="parallel">B1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Аджима Никита <div class="parallel">A7</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Люлько Алексей <div class="parallel">C1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Ваньян Макар <div class="parallel">B1</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Оздоев Адам <div class="parallel">C1</div>, <div class="redfont">комиссар</div>, 4</div>
+                            <div class="divider"></div>
+                            <div>Смирнов Владислав <div class="parallel">C2</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10.08 20:00</td>
+                        <td>11</td>
+                        <td><div class="redfont">Победа мирных</div></td>
+                        <td>
+                            <div>Пискалов Дмитрий <div class="parallel">A0</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Королёва Таисия <div class="parallel">C2</div>, дон, -1</div>
+                            <div class="divider"></div>
+                            <div>Солопов Юрий <div class="parallel">B9</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Маляровский Степан <div class="parallel">C9</div>, <div class="redfont">комиссар</div>, 4</div>
+                            <div class="divider"></div>
+                            <div>Павлек Николай <div class="parallel">A1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Лоптев Сергей <div class="parallel">физрук</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Клигунов Илья <div class="parallel">B1</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Агеев Николай <div class="parallel">C1</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Остапенко Владислав <div class="parallel">C1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Стёпкин Степан <div class="parallel">A7</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>09.08 21:00</td>
+                        <td>10</td>
+                        <td><div class="redfont">Победа мирных</div></td>
+                        <td>
+                            <div>Захаров Давид <div class="parallel">B2</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Грицаев Тимофей <div class="parallel">A1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Павлек Николай <div class="parallel">A1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Клигунов Илья <div class="parallel">B1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Агеев Николай <div class="parallel">C1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Пискалов Дмитрий <div class="parallel">A0</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Порфирьев Антон <div class="parallel">B7</div>, <div class="redfont">комиссар</div>, 4</div>
+                            <div class="divider"></div>
+                            <div>Бендриковский Егор <div class="parallel">C2</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Дацковский Алексей <div class="parallel">B8</div>, дон, -1</div>
+                            <div class="divider"></div>
+                            <div>Галатенко Дмитрий <div class="parallel">A8</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>09.08 20:00</td>
+                        <td>9</td>
+                        <td>Победа мафии</td>
+                        <td>
+                            <div>Долгопол Кирилл <div class="parallel">C9</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Оздоев Адам <div class="parallel">C1</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                            <div>Маляровский Степан <div class="parallel">C9</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Ваньян Макар <div class="parallel">B1</div>, дон, 5</div>
+                            <div class="divider"></div>
+                            <div>Люлько Алексей <div class="parallel">C1</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                            <div>Солопов Юрий <div class="parallel">B9</div>, <div class="redfont">комиссар</div>, -1</div>
+                            <div class="divider"></div>
+                            <div>Стёпкин Степан <div class="parallel">A7</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Смирнов Владислав <div class="parallel">C2</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Лоптев Сергей <div class="parallel">физрук</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Почепцов Игорь <div class="parallel">B1</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>08.08 21:00</td>
+                        <td>8</td>
+                        <td><div class="redfont">Победа мирных</div></td>
+                        <td>
+                            <div>Захаров Давид <div class="parallel">B2</div>, <div class="redfont">комиссар</div>, 4</div>
+                            <div class="divider"></div>
+                            <div>Оздоев Адам <div class="parallel">C1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Панарин Александр <div class="parallel">A8</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Остапенко Владислав <div class="parallel">C1</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Бендриковский Егор <div class="parallel">C2</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Королёва Таисия <div class="parallel">C2</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Дацковский Алексей <div class="parallel">B8</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Порфирьев Антон <div class="parallel">B7</div>, дон, -1</div>
+                            <div class="divider"></div>
+                            <div>Аджима Никита <div class="parallel">A7</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Галатенко Дмитрий <div class="parallel">A8</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>08.08 20:00</td>
+                        <td>7</td>
+                        <td>Победа мафии</td>
+                        <td>
+                            <div>Люлько Алексей <div class="parallel">C1</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Смирнов Владислав <div class="parallel">C2</div>, дон, 5</div>
+                            <div class="divider"></div>
+                            <div>Ваньян Макар <div class="parallel">B1</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Маляровский Степан <div class="parallel">C9</div>, <div class="redfont">комиссар</div>, -1</div>
+                            <div class="divider"></div>
+                            <div>Долгопол Кирилл <div class="parallel">C9</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Пискалов Дмитрий <div class="parallel">A0</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Агеев Николай <div class="parallel">C1</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Стёпкин Степан <div class="parallel">A7</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                            <div>Почепцов Игорь <div class="parallel">B1</div>, <div class="redfont">мирный</div>, 0.5</div>
+                            <div class="divider"></div>
+                            <div>Клигунов Илья <div class="parallel">B1</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>07.08 17:30</td>
+                        <td>6</td>
+                        <td>Победа мафии</td>
+                        <td>
+                            <div>Королёва Таисия <div class="parallel">C2</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Бендриковский Егор <div class="parallel">C2</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Аджима Никита <div class="parallel">A7</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                            <div>Галатенко Дмитрий <div class="parallel">A8</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Солопов Юрий <div class="parallel">B9</div>, <div class="redfont">комиссар</div>, -1</div>
+                            <div class="divider"></div>
+                            <div>Лоптев Сергей <div class="parallel">физрук</div>, дон, 5</div>
+                            <div class="divider"></div>
+                            <div>Павлек Николай <div class="parallel">A1</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                            <div>Порфирьев Антон <div class="parallel">B7</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Дацковский Алексей <div class="parallel">B8</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Остапенко Владислав <div class="parallel">C1</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>07.08 16:30</td>
+                        <td>5</td>
+                        <td>Победа мафии</td>
+                        <td>
+                            <div>Захаров Давид <div class="parallel">B2</div>, <div class="redfont">комиссар</div>, -1</div>
+                            <div class="divider"></div>
+                            <div>Почепцов Игорь <div class="parallel">B1</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Пискалов Дмитрий <div class="parallel">A0</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                            <div>Стёпкин Степан <div class="parallel">A7</div>, дон, 5</div>
+                            <div class="divider"></div>
+                            <div>Люлько Алексей <div class="parallel">C1</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                            <div>Ваньян Макар <div class="parallel">B1</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Оздоев Адам <div class="parallel">C1</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Смирнов Владислав <div class="parallel">C2</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Грицаев Тимофей <div class="parallel">A1</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Панарин Александр <div class="parallel">A8</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>06.08 21:00</td>
+                        <td>4</td>
+                        <td>Победа мафии</td>
+                        <td>
+                            <div>Павлек Николай <div class="parallel">A1</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                            <div>Клигунов Илья <div class="parallel">B1</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Грицаев Тимофей <div class="parallel">A1</div>, дон, 5</div>
+                            <div class="divider"></div>
+                            <div>Солопов Юрий <div class="parallel">B9</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Остапенко Владислав <div class="parallel">C1</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                            <div>Дацковский Алексей <div class="parallel">B8</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Долгопол Кирилл <div class="parallel">C9</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Лоптев Сергей <div class="parallel">физрук</div>, <div class="redfont">комиссар</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Порфирьев Антон <div class="parallel">B7</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Королёва Таисия <div class="parallel">C2</div>, <div class="redfont">мирный</div>, 0</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>06.08 20:00</td>
+                        <td>3</td>
+                        <td><div class="redfont">Победа мирных</div></td>
+                        <td>
+                            <div>Люлько Алексей <div class="parallel">C1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Ваньян Макар <div class="parallel">B1</div>, дон, -1</div>
+                            <div class="divider"></div>
+                            <div>Оздоев Адам <div class="parallel">C1</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Смирнов Владислав <div class="parallel">C2</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Агеев Николай <div class="parallel">C1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Маляровский Степан <div class="parallel">C9</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Бендриковский Егор <div class="parallel">C2</div>, <div class="redfont">комиссар</div>, 4</div>
+                            <div class="divider"></div>
+                            <div>Панарин Александр <div class="parallel">B2</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Галатенко Дмитрий <div class="parallel">A8</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Аджима Никита <div class="parallel">A7</div>, <div class="redfont">мирный</div>, 3</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>05.08 21:00</td>
+                        <td>2</td>
+                        <td><div class="redfont">Победа мирных</div></td>
+                        <td>
+                            <div>Клигунов Илья <div class="parallel">B1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Аджима Никита <div class="parallel">A7</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Агеев Николай <div class="parallel">C1</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Остапенко Владислав <div class="parallel">C1</div>, <div class="redfont">комиссар</div>, 4</div>
+                            <div class="divider"></div>
+                            <div>Маляровский Степан <div class="parallel">C9</div>, мафия, 0</div>
+                            <div class="divider"></div>
+                            <div>Пискалов Дмитрий <div class="parallel">A0</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Порфирьев Антон <div class="parallel">B7</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Стёпкин Степан <div class="parallel">A7</div>, <div class="redfont">мирный</div>, 3</div>
+                            <div class="divider"></div>
+                            <div>Королёва Таисия <div class="parallel">C2</div>, дон, -1</div>
+                            <div class="divider"></div>
+                            <div>Солопов Юрий <div class="parallel">B9</div>, мирный, 3</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>05.08 20:00</td>
+                        <td>1</td>
+                        <td>Победа мафии</td>
+                        <td>
+                            <div>Лоптев Сергей <div class="parallel">физрук</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Панарин Александр <div class="parallel">A8</div>, <div class="redfont">мирный</div>, 0.5</div>
+                            <div class="divider"></div>
+                            <div>Грицаев Тимофей <div class="parallel">A1</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Павлек Николай <div class="parallel">A1</div>, дон, 5</div>
+                            <div class="divider"></div>
+                            <div>Дацковский Алексей <div class="parallel">B8</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                            <div>Долгопол Кирилл <div class="parallel">C9</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Захаров Давид <div class="parallel">B2</div>, <div class="redfont">комиссар</div>, -1</div>
+                            <div class="divider"></div>
+                            <div>Бендриковский Егор <div class="parallel">C2</div>, <div class="redfont">мирный</div>, 0</div>
+                            <div class="divider"></div>
+                            <div>Почепцов Игорь <div class="parallel">B1</div>, мафия, 4</div>
+                            <div class="divider"></div>
+                            <div>Галатенко Дмитрий <div class="parallel">A8</div>, <div class="redfont">мирный</div>, 0</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="timetable">
+                <table>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Номер стола</th>
+                        <th>Участники</th>
+                    </tr>
+                </table>
+            </div>
             <div id="table" class="col s12">
                 <table>
                     <tr>
-                        <th>Место</th>
                         <th>Участник</th>
                         <th>Счёт</th>
                     </tr>
+                    <tr>
+                        <td>Павлек Николай <div class="parallel">A1</div></td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Панарин Александр <div class="parallel">A8</div></td>
+                        <td>22.5</td>
+                    </tr>
+                    <tr>
+                        <td>Люлько Алексей <div class="parallel">C1</div></td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>Почепцов Игорь <div class="parallel">B1</td>
+                        <td>20.5</td>
+                    </tr>
+                    <tr>
+                        <td>Аджима Никита <div class="parallel">A7</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                       <td>Остапенко Владислав <div class="parallel">C1</td>
+                       <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Смирнов Владислав <div class="parallel">C2</div></td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Грицаев Тимофей <div class="parallel">A1</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>Пискалов Дмиитрий <div class="parallel">A0</div></td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>Стёпкин Степан <div class="parallel">A7</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Оздоев Адам <div class="parallel">C1</div></td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>Клигунов Илья <div class="parallel">B1</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Лоптев Сергей <div class="parallel">физрук</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Бендриковский Егор <div class="parallel">C2</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Дацковский Алексей <div class="parallel">B8</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Агеев Николай <div class="parallel">C1</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Галатенко Дмитрий <div class="parallel">A8</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Порфирьев Антон <div class="parallel">B7</td>
+                        <td>6</td>
+                    </tr>                    
+                    <tr>
+                        <td>Маляровский Степан <div class="parallel">C1</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Захаров Давид <div class="parallel">B2</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Ваньян Макар <div class="parallel">B1</div></td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Солопов Юрий <div class="parallel">B9</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Долгопол Кирилл <div class="parallel">C9</td>
+                        <td>-1</td>
+                    </tr>
+                    <tr>
+                        <td>Королёва Таисия <div class="parallel">B7</td>
+                        <td>-2</td>
+                    </tr>   
                 </table>
             </div>
             <div id="participants" class="col s12">
@@ -93,6 +552,50 @@
             <div id="rules">
                 <div class="col s10 offset-s1">
                     <h2>Правила</h2>
+                    <h3>Система подсчёта очков</h3>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Победа</th>
+                            <th>Поражение</th>
+                        </tr>
+                        <tr>
+                            <td>Мафия</td>
+                            <td>+4</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Дон</td>
+                            <td>+5</td>
+                            <td>-1</td>
+                        </tr>
+                        <tr>
+                            <td>Шериф</td>
+                            <td>+4</td>
+                            <td>-1</td>
+                        </tr>
+                        <tr>
+                            <td>Мирный житель</td>
+                            <td>+3</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Лучший ход</td>
+                            <td>+1 (+0,5)</td>
+                            <td>+1 (+0,5)</td>
+                        </tr>
+                        <tr>
+                            <td>Лучший игрок</td>
+                            <td>+1</td>
+                            <td>+1</td>
+                        </tr>
+                    </table>
+                    <p>Лучший ход — мирный житель, убитый в первую ночь, называет 3 или 2 мафии.</p>
+                    <p>Лучший игрок — определяется в полуфинале и финале чемпионата тремя судьями игры, а в 
+                        отборочных играх лучшего игрока не выбирают.</p>
+                    <p>В ситуации, когда за столом остается четыре игрока, если на протяжении трех ночей никто не 
+                        уходит из-за игрового стола (мафия не стреляет), объявляется победа мирных.</p>
+                    <p>Шериф, убитый в первую ночь, не наказывается штрафом -1 балл.</p>
                     <h3>Состав игры</h3> 
                     <p>
                         В игре участвуют 10 человек — 7 мирных жителей (команда красных игроков) и 3 мафии (команда черных 
