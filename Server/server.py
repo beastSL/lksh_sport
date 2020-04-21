@@ -27,13 +27,8 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-<<<<<<< HEAD
 jsonfile = open('participants.json', 'r')
 participants = loads(jsonfile.read(), encoding='utf-8')
-=======
-jsonfile = open('participants.json', 'r').read()
-participants = loads(jsonfile, encoding='utf-8')
->>>>>>> 2ac618d3553a7ba14307e6e69129a082e41d3bb8
 groups = {}
 teachers = []
 
@@ -256,11 +251,7 @@ for sport in cfg.sports.values():
     if Sport.query.filter_by(name=sport).first() is None:
         sp = Sport(name=sport)
         db.session.add(sp)
-<<<<<<< HEAD
         db.session.commit()
-=======
->>>>>>> 2ac618d3553a7ba14307e6e69129a082e41d3bb8
-    db.session.commit()
 
 reg_parser = reqparse.RequestParser()
 reg_parser.add_argument('sports-type')

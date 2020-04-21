@@ -7,8 +7,8 @@ import requests
 
 token = cfg.tg_token
 request_kwargs = {
-    # 'proxy_url': cfg.proxy_url,
-    # # Optional, if you need authentication:
+    'proxy_url': cfg.proxy_url,
+    # Optional, if you need authentication:
     # 'urllib3_proxy_kwargs': {
     #    'username': cfg.proxy_user,
     #    'password': cfg.proxy_pass,
@@ -16,7 +16,7 @@ request_kwargs = {
 }
 updater = Updater(
     token=cfg.tg_token,
-    # request_kwargs=request_kwargs,
+    request_kwargs=request_kwargs,
     use_context=True
 )
 dispatcher = updater.dispatcher
