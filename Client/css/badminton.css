@@ -6,7 +6,7 @@ tr:hover td .parallel {
     color: #ff7046;
 }
 
-.parallel {
+div.parallel {
     color: #bbbbbb;
     font-size: 0.8em;
     display: inline;
@@ -30,6 +30,10 @@ span {
 
 .center tr th, .center tr td {
     text-align: center;
+}
+
+.redfont {
+    color: red;
 }
 
 /*

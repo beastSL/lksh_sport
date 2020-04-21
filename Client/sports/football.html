@@ -55,20 +55,20 @@
         <div class="row">
             <div class="col s12">
                 <ul class="tabs">
-                    <li class="tab col s2 disabled">
+                    <li class="tab col s2">
                         <a href="#results">Результаты</a>
                     </li>
-                    <li class="tab col s2 disabled">
-                        <a href="#timetable">Расписание</a>
+                    <li class="tab col s2">
+                        <a class="active" href="#timetable">Расписание</a>
                     </li>
-                    <li class="tab col s2 disabled">
+                    <li class="tab col s2">
                         <a href="#net">Сетка</a>
                     </li>
-                    <li class="tab col s2 disabled">
+                    <li class="tab col s2">
                         <a href="#mvp">Бомбардиры</a>
                     </li>
                     <li class="tab col s2">
-                        <a class="active" href="#participants">Список участников</a>
+                        <a href="#participants">Список участников</a>
                     </li>
                     <li class="tab col s2">
                         <a href="#rules">Правила</a>
@@ -81,6 +81,32 @@
                         <th>Дата</th>
                         <th>Результат</th>
                     </tr>
+                    <tr>
+                        <td>13.08 19:45</td>
+                        <td>Шэйла-мэйла <div class="result">4 : 2</div> Одеяло</td>
+                    </tr>
+                    <tr>
+                        <td>13.08 18:15</td>
+                        <td>Хайтек <div class="result">5 : 3</div> Лионель Глиномесси</td>
+                    </tr>
+                    <tr>
+                        <td>12.08 16:30</td>
+                        <td>Шэйла-мэйла <div class="result">3 : 1</div> Сборная</td>
+                    </tr>
+                    <tr>
+                        <td>12.08 17:00</td>
+                        <td>пiчiнiк овсiнiк <div class="result">3 : 7</div> Одеяло</td>
+                    </tr>
+                    <tr>
+                        <td>12.08 17:30</td>
+                        <td>Лионель Глиномесси <div class="result">7 : 1</div> Сборная</td>
+                    </tr>
+                    <tr>
+                        <td>12.08 18:00</td>
+                        <td>пiчiнiк овсiнiк <div class="result">2 : 4</div> Хайтек</td>
+                    </tr>
+                    <tr><td>10.08 17:00</td><td>Шэйла-мэйла <div class="result">4 : 2</div> Лионель Глиномесси</td></tr>
+                    <tr><td>10.08 17:30</td><td>Хайтек <div class="result">6 : 2</div> Одеяло</td></tr>
                 </table>
             </div>
             <div id="timetable" class="col s12">
@@ -88,6 +114,14 @@
                     <tr>
                         <th>Дата</th>
                         <th>Игра</th>
+                    </tr>
+                    <tr>
+                        <td>14.08 17:00</td>
+                        <td>Лионель Глиномесси - Одеяло</td>
+                    </tr>
+                    <tr>
+                        <td>14.08 17:45</td>
+                        <td>Хайтек - Шэйла-мэйла</td>
                     </tr>
                 </table>
             </div>
@@ -98,18 +132,144 @@
                             <a href="#group">Групповой этап</a>
                         </li>
                         <li class="tab col s6">
-                            <a target="_blank" href="../content/badminton_net.svg">Плейофф</a>
+                            <a target="_blank" href="../content/football_net.svg">Плейофф</a>
                         </li>
                     </ul>
                 </div>
-                <div id="group"></div> 
+                <div id="group">
+                    <h1>Группа 1</h1>
+                    <table>
+                        <tr>
+                            <th>Команда</th>
+                            <th>Побед</th>
+                            <th>Поражений</th>
+                            <th>Разница голов</th>
+                            <th>Очков</th>
+                        </tr>
+                        <tr>
+                            <td>Шэйла-мэйла</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>+4</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Лионель Глиномесси</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>+4</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Сборная</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>-8</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                    <h1>Группа 2</h1>
+                    <table>
+                        <tr>
+                            <th>Команда</th>
+                            <th>Побед</th>
+                            <th>Поражений</th>
+                            <th>Разница по очкам за партии</th>
+                            <th>Очков</th>
+                        </tr>
+                        <tr>
+                            <td>Хайтек</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>+6</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Одеяло</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>пiчiнiк овсiнiк</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>-6</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </div> 
             </div>
             <div id="mvp" class="col s12">
                 <table class="narrow">
                     <tr>
-                        <th>Место</th>
                         <th>Участник</th>
                         <th>Голов</th>
+                    </tr>
+                    <tr>
+                        <td>Аджима Никита <div class="parallel">A7</div></td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Чемерисов Егор <div class="parallel">B9</div></td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Максюта Юрий <div class="parallel">B9</div></td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Обозный Максим <div class="parallel">A1</div></td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Осетров Фёдор <div class="parallel">B2</div></td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Лупильцев Георгий <div class="parallel">C9</div></td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Бурков Илья <div class="parallel">B1</div></td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Сергиенко Дмитрий <div class="parallel">B1</div></td>
+                        <td>3</td>
+                    </tr>   
+                    <tr>
+                        <td>Павленко Даниил <div class="parallel">A1</div></td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Канатулы Аманбол <div class="parallel">B</div></td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Кулдошин Алексей <div class="parallel">A7.преп</div></td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Ройтерштейн Антон <div class="parallel">A7</div></td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Васильев Алексей <div class="parallel">B8</div></td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Стёпкин Степан <div class="parallel">A7</div></td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Алентьев Игорь <div class="parallel">A7</div></td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Новиков Сергей <div class="parallel">B9</div></td>
+                        <td>1</td>
                     </tr>
                 </table>
             </div>

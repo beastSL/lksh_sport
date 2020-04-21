@@ -76,8 +76,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 "table-tennis") {
                 var isHidden = true;
                 var games = sportTts[i].querySelectorAll("tr");
+                console.log(sportTts[i]);
                 console.log(games);
                 for (var j = 1; j < games.length; j++) {
+                    console.log(games[j].childNodes);
                     console.log(games[j].childNodes[1].textContent.slice(0, 5));
                     console.log(dateModified);
                     if (games[j].childNodes[1].textContent.slice(0, 5) != dateModified) {
